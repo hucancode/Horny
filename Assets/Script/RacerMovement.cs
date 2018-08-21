@@ -150,10 +150,6 @@ public class RacerMovement : MonoBehaviour {
 
 	public void TurnBegin(bool is_left)
 	{
-		if(behavior == RacerBehavior.CHARGE_270)
-		{
-			is_left = !is_left;
-		}
 		targetAngle = (is_left?turnRange:-turnRange) + GetLookAtAngle();
 		state = RacerState.TURNING;
 		Debug.Log("Turn begin " + targetAngle);
@@ -161,10 +157,6 @@ public class RacerMovement : MonoBehaviour {
 
 	public void TurnUpdate(bool is_left)
 	{
-		if(behavior == RacerBehavior.CHARGE_270)
-		{
-			is_left = !is_left;
-		}
 		targetAngle = (is_left?turnRange:-turnRange) + GetLookAtAngle();
 	}
 

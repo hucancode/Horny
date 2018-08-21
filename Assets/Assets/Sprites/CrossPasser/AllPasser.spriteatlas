@@ -49,10 +49,81 @@ SpriteAtlas:
       enableRotation: 1
       enableTightPacking: 1
     variantMultiplier: 1
-    packables: []
+    packables:
+    - {fileID: 102900000, guid: 5b7dcd3d288d30f4e95f09307263ff69, type: 3}
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
-  m_PackedSprites: []
-  m_PackedSpriteNamesToIndex: []
+  m_PackedSprites:
+  - {fileID: 21300000, guid: f74e2a205ad3f714495f770232f595d0, type: 3}
+  - {fileID: 21300000, guid: 7e0a016653f5ca94a8a004002f079b83, type: 3}
+  - {fileID: 21300000, guid: fb8fcfe3bd61c8b44b2f3a54948a1732, type: 3}
+  - {fileID: 21300000, guid: b6e97dfc7b61c164aa760f0a0cc7305e, type: 3}
+  - {fileID: 21300000, guid: fa864d2c13457f24aa296fd56dc3c1a1, type: 3}
+  - {fileID: 21300000, guid: c00bf07ccfaa19e409bbc9271a7e49b2, type: 3}
+  - {fileID: 21300000, guid: f6232799b8a445e47b86dd91a155ff35, type: 3}
+  - {fileID: 21300000, guid: b3a41bc27b86adc4d8ca3990e3e4bf5e, type: 3}
+  - {fileID: 21300000, guid: e220419a346473945b770fc98680b15f, type: 3}
+  - {fileID: 21300000, guid: fde920e5391a8b746b730ab989b0c2af, type: 3}
+  - {fileID: 21300000, guid: c24f0cbeaf15ec041979b352b77e49bf, type: 3}
+  - {fileID: 21300000, guid: f000ce64b002e7a4dba6fd8377d7d88b, type: 3}
+  - {fileID: 21300000, guid: 80b5cd5e5734baa43a4fde26583188c5, type: 3}
+  - {fileID: 21300000, guid: 2498170ac6d398f42a8f91968dc2fcb5, type: 3}
+  - {fileID: 21300000, guid: 92486269061f69641adc3f353da2f90e, type: 3}
+  - {fileID: 21300000, guid: 43f4e611da827f14db7cd47247b3b61a, type: 3}
+  - {fileID: 21300000, guid: 46f9a85027bbf1745b572dc85a0ae80b, type: 3}
+  - {fileID: 21300000, guid: d2616814e4bcca444aa7af7ee2ae03a8, type: 3}
+  - {fileID: 21300000, guid: 887c904e49a2acd47b6fa11fbdf56ab7, type: 3}
+  - {fileID: 21300000, guid: 2fc30e57a6d35314da56d7510555593c, type: 3}
+  - {fileID: 21300000, guid: 777ae2981116eba45bc2b5535db7bd78, type: 3}
+  - {fileID: 21300000, guid: 4875b4f01e00e344a8ae8acdc763231d, type: 3}
+  - {fileID: 21300000, guid: a22dc7699aa6a664ab61679b0a37f6d6, type: 3}
+  - {fileID: 21300000, guid: b60928d71f2680e49bb4bb21c08cf2fd, type: 3}
+  - {fileID: 21300000, guid: 44ba472faf1cca1479b2f8276be04547, type: 3}
+  - {fileID: 21300000, guid: 351d2913764fba24cbb191921e967975, type: 3}
+  - {fileID: 21300000, guid: 671d3241811f467489cbb5cc30653ec2, type: 3}
+  - {fileID: 21300000, guid: fa40a553904694c44b50528cbe8e83ff, type: 3}
+  - {fileID: 21300000, guid: 19a91b055e9aad44daaebe3201377b3f, type: 3}
+  - {fileID: 21300000, guid: ea03ed6737422f149840b446f4cdf071, type: 3}
+  - {fileID: 21300000, guid: b97af24acb413cf4ead7dae5bf136a4d, type: 3}
+  - {fileID: 21300000, guid: 5f666539aacbc1e47be8aa72209d0eb6, type: 3}
+  - {fileID: 21300000, guid: b7ff73313b074fc489fac9ed759baaf5, type: 3}
+  - {fileID: 21300000, guid: 6feb0e7402965514f98aed0108542430, type: 3}
+  - {fileID: 21300000, guid: bc2ffd09ae8f5b743ae20fdde22ea91e, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - bus_h_2
+  - bus_h_1
+  - train_car_1
+  - train_car_2
+  - tourbus_red_1
+  - tourbus_red_2
+  - tourbus_white_2
+  - tourbus_white_1
+  - herd_h1_2
+  - herd_h1_1
+  - herd_h2_1
+  - herd_h2_2
+  - farm_truck_h2
+  - farm_truck_h1
+  - tribike_1
+  - tribike_2
+  - snack_trolley_1
+  - snack_trolley_2
+  - garbage_worker_1
+  - garbage_worker_2
+  - garbage_worker_3
+  - lugger_1
+  - lugger_2
+  - ninjaP_h_2
+  - ninjaP_h_1
+  - ninja_h_1
+  - ninja_h_2
+  - mouse_dead
+  - mouse_1
+  - mouse_3
+  - mouse_2
+  - mouse_5
+  - mouse_4
+  - mouse_7
+  - mouse_6
   m_Tag: AllPasser
   m_IsVariant: 0
