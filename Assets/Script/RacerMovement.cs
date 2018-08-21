@@ -13,8 +13,8 @@ public class RacerMovement : MonoBehaviour {
 
 	public enum RacerBehavior
 	{
-		DYNAMIC_CHARGE = 0,
-		CONSTANT_CHARGE = 1
+		CHARGE_90 = 0,
+		CHARGE_270 = 1
 	};
 
 	[Tooltip("Rigidbody2D component")]
@@ -33,26 +33,29 @@ public class RacerMovement : MonoBehaviour {
 	public RacerBehavior behavior;
 	[Tooltip("Enable swing physics")]
 	public bool enableSwing = true;
+	[Tooltip("How strong racer should swing, higher value mean less swing")]
+	public float swingPower = 0.3f;
+	[Tooltip("Enable dynamic turning, maintaining y-velocity while turning")]
+	public const bool dynamicTurning = true;
 	//[HideInInspector]
 	public RacerState state;
 	//[HideInInspector]
 	public float linearSpeed;// m/s
 	
-	private float targetRotation;// degree
+	private float targetAngle;// degree
 	private Vector2 swingPivot;
 
-	private const float INITIAL_ANGLE = 90.0f;
+	private const float SPRITE_ANGLE = 90.0f;
 	private const float VISION_LENGTH = 4.0f;
 	private const float ROTATION_TOLERANCE = 5.0f;
-	private const float SWING_POWER = 0.3f; // 0.0 = no swing, 1.0 = swing forever, never stop
-	private const bool DYNAMIC_ROTATION = true;
-	private const float DYNAMIC_ROTATION_FORCE = 5.0f;
+	
+	
 
 	void Start() 
 	{
 		state = RacerState.CHARGING;
 		swingPivot = Vector2.zero;
-		targetRotation = INITIAL_ANGLE;
+		targetAngle = SPRITE_ANGLE;
 		swingPivot = transform.position;
 	}
 
@@ -69,19 +72,19 @@ public class RacerMovement : MonoBehaviour {
 		{
 			return;
 		}
-		float d = targetRotation - GetRigidBodyRotation();
+		float d = targetAngle - GetRigidBodyRotation();
 		if(Mathf.Abs(d) > ROTATION_TOLERANCE)
 		{
 			float new_rotation = GetRigidBodyRotation() + Mathf.Sign(d)*angularSpeed*Time.fixedDeltaTime;
 			SetRigidBodyRotation(new_rotation);
 			{
-				Vector3 r_vector = new Vector3(Mathf.Cos((targetRotation)* Mathf.Deg2Rad), Mathf.Sin((targetRotation)* Mathf.Deg2Rad));
+				Vector3 r_vector = new Vector3(Mathf.Cos((targetAngle)* Mathf.Deg2Rad), Mathf.Sin((targetAngle)* Mathf.Deg2Rad));
 				Debug.DrawLine(transform.position, transform.position+Vector3.Normalize(r_vector)*VISION_LENGTH, Color.red);
 			}
 		}
 		else
 		{
-			SetRigidBodyRotation(targetRotation);
+			SetRigidBodyRotation(targetAngle);
 		}
 	}
 
@@ -100,9 +103,9 @@ public class RacerMovement : MonoBehaviour {
 		thrust = Quaternion.Euler(0.0f, 0.0f, GetRigidBodyRotation()) * thrust;
 		rigidBody.AddForce(thrust);
 		
-		if(DYNAMIC_ROTATION)
+		if(dynamicTurning)
 		{
-			CompensateRotation();
+			AddSupportForce(thrust);
 		}
 		{
 			Vector3 r_vector = new Vector3(thrust.x, thrust.y);
@@ -110,14 +113,12 @@ public class RacerMovement : MonoBehaviour {
 		}
 	}
 
-	void CompensateRotation()
+	void AddSupportForce(Vector2 thrust)
 	{
-		float micro_speed = linearSpeed * Time.fixedDeltaTime;
-		float current_rotation = Vector2.Angle(rigidBody.velocity, Vector2.right);
-		float r = Mathf.Abs(targetRotation - current_rotation)/180.0f*DYNAMIC_ROTATION_FORCE;
-		Vector2 lean = Vector2.right * micro_speed * r * r;
-		lean = Quaternion.Euler(0.0f, 0.0f, GetRigidBodyRotation()) * lean;
-		rigidBody.AddForce(lean);
+		float ratio = 1.0f/Mathf.Cos(rigidBody.rotation*Mathf.Deg2Rad);
+		Vector2 full_force = thrust*ratio;
+		Vector2 support_force = full_force - thrust;
+		rigidBody.AddForce(support_force);
 	}
 
 	void UpdateBackSwing()
@@ -136,32 +137,40 @@ public class RacerMovement : MonoBehaviour {
 		}
 		Vector2 position_2d = new Vector2(transform.position.x, transform.position.y);
 
-		swingPivot.y = transform.position.y + VISION_LENGTH*SWING_POWER;
+		swingPivot.y = transform.position.y + VISION_LENGTH*swingPower;
 
 		float target_angle = Vector2.Angle(swingPivot - position_2d, Vector2.right);
-		targetRotation = target_angle;
+		targetAngle = target_angle;
 		{
 			Vector3 r_vector = new Vector3(swingPivot.x, swingPivot.y);
 			Debug.DrawLine(transform.position, r_vector, Color.blue);
 		}
-		Debug.Log("swingging..., target angle = " + targetRotation);
+		Debug.Log("swingging..., target angle = " + targetAngle);
 	}
 
 	public void TurnBegin(bool is_left)
 	{
-		targetRotation = (is_left?turnRange:-turnRange) + INITIAL_ANGLE;
+		if(behavior == RacerBehavior.CHARGE_270)
+		{
+			is_left = !is_left;
+		}
+		targetAngle = (is_left?turnRange:-turnRange) + GetLookAtAngle();
 		state = RacerState.TURNING;
-		Debug.Log("Turn begin " + targetRotation);
+		Debug.Log("Turn begin " + targetAngle);
 	}
 
 	public void TurnUpdate(bool is_left)
 	{
-		targetRotation = (is_left?turnRange:-turnRange) + INITIAL_ANGLE;
+		if(behavior == RacerBehavior.CHARGE_270)
+		{
+			is_left = !is_left;
+		}
+		targetAngle = (is_left?turnRange:-turnRange) + GetLookAtAngle();
 	}
 
 	public void TurnEnd()
 	{
-		targetRotation = INITIAL_ANGLE;
+		targetAngle = GetLookAtAngle();
 		swingPivot = transform.position;
 		state = RacerState.CHARGING;
 		if(!enableSwing)
@@ -172,15 +181,15 @@ public class RacerMovement : MonoBehaviour {
 
 	public void ResetRotation()
 	{
-		targetRotation = INITIAL_ANGLE;
+		targetAngle = GetLookAtAngle();
 		Vector2 new_velocity = Vector2.right * rigidBody.velocity.magnitude;
-		new_velocity = Quaternion.Euler(0.0f, 0.0f, targetRotation) * new_velocity;
+		new_velocity = Quaternion.Euler(0.0f, 0.0f, targetAngle) * new_velocity;
 		rigidBody.velocity = new_velocity;
 	}
 
 	public void ResetRotationAndVelocity()
 	{
-		rigidBody.rotation = 0.0f;
+		rigidBody.rotation = GetLookAtAngle() - SPRITE_ANGLE;
 		rigidBody.velocity = Vector2.zero;
 	}
 
@@ -201,11 +210,16 @@ public class RacerMovement : MonoBehaviour {
 	
 	float GetRigidBodyRotation()
 	{
-		return rigidBody.rotation + INITIAL_ANGLE;
+		return rigidBody.rotation + SPRITE_ANGLE;
+	}
+
+	float GetLookAtAngle()
+	{
+		return (behavior == RacerBehavior.CHARGE_90)?90.0f:270.0f;
 	}
 
 	void SetRigidBodyRotation(float new_rotation)
 	{
-		rigidBody.MoveRotation(new_rotation - INITIAL_ANGLE);
+		rigidBody.MoveRotation(new_rotation - SPRITE_ANGLE);
 	}
 }
