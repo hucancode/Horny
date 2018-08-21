@@ -21,6 +21,10 @@ public class HouseGenerator : MonoBehaviour {
 	
 	void Start ()
 	{
+		if(seeds.Length == 0)
+		{
+			return;
+		}
 		if(direction == MarchingDirection.Vertical)
 		{
 			float y = 0;

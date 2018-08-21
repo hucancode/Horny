@@ -29,6 +29,7 @@ public class TrackGenerator : MonoBehaviour {
 			i--;
 		}
 		GameObject clone = Instantiate(seeds[i], position, Quaternion.identity);
+		// TODO: implement track pool that actually is a pool
 		TrackPool.instance.Push(clone);
 		hitBox.enabled = false;
 	}

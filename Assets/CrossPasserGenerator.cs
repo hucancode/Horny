@@ -2,20 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RacerGenerator : MonoBehaviour {
+public class CrossPasserGenerator : MonoBehaviour {
 
 	public GameObject[] seeds;
 	public BoxCollider2D spawnArea;
-	public float interval = 5.0f;
+	public float interval = 50.0f;
 	public float linearMaxSpeed = 120.0f;
 	public float linearMaxSpeedVar = 50.0f;
+	public bool lookAtLeft = false;
 
 	private float timer = 0.0f;
 	private const float RACER_Z = -3.0f;
 	
 	void Start ()
 	{
-		timer = interval;
+		timer = 0.0f;
 	}
 	
 	void FixedUpdate ()
@@ -24,11 +25,11 @@ public class RacerGenerator : MonoBehaviour {
 		if(timer <= 0.0f)
 		{
 			timer = interval;
-			SpawnRacerRandom();
+			SpawnPasserRandom();
 		}
 	}
 
-	public void SpawnRacerRandom()
+	public void SpawnPasserRandom()
 	{
 		if(seeds.Length == 0)
 		{
@@ -46,11 +47,15 @@ public class RacerGenerator : MonoBehaviour {
 		position.y = transform.position.y + Random.Range(-half_h, half_h);
 		position.z = RACER_Z;
 		GameObject clone = Instantiate(seeds[i], position, Quaternion.identity);
-		RacerMovement movement_component = clone.GetComponent<RacerMovement>();
+		CrossPasserMovement movement_component = clone.GetComponent<CrossPasserMovement>();
+		SpriteRenderer sprite_component = clone.GetComponent<SpriteRenderer>();
 		movement_component.linearMaxSpeed = Random.Range(
 			linearMaxSpeed - linearMaxSpeedVar, linearMaxSpeed + linearMaxSpeedVar);
-		movement_component.enableSwing = (Random.Range(0.0f, 1.0f) > 0.5f);
-		// TODO: implement a pool that actually is a pool
+		if(lookAtLeft)
+		{
+			sprite_component.flipX = true;
+			movement_component.linearMaxSpeed = - movement_component.linearMaxSpeed;
+		}
 		RacerPool.instance.Push(clone);
 	}
 }

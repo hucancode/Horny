@@ -145,14 +145,14 @@ public class RacerMovement : MonoBehaviour {
 			Vector3 r_vector = new Vector3(swingPivot.x, swingPivot.y);
 			Debug.DrawLine(transform.position, r_vector, Color.blue);
 		}
-		Debug.Log("swingging..., target angle = " + targetAngle);
+		//Debug.Log("swingging..., target angle = " + targetAngle);
 	}
 
 	public void TurnBegin(bool is_left)
 	{
 		targetAngle = (is_left?turnRange:-turnRange) + GetLookAtAngle();
 		state = RacerState.TURNING;
-		Debug.Log("Turn begin " + targetAngle);
+		//Debug.Log("Turn begin " + targetAngle);
 	}
 
 	public void TurnUpdate(bool is_left)
