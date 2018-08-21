@@ -151,7 +151,8 @@ MonoBehaviour:
   angularSpeed: 500
   turnRange: 60
   behavior: 0
-  EnableSwing: 0
+  enableSwing: 1
+  swingPower: 0.3
   state: 0
   linearSpeed: 0
 --- !u!212 &212698200374200190
