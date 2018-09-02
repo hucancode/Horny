@@ -12,15 +12,18 @@ public class HouseGenerator : MonoBehaviour {
 	public GameObject[] seeds;
 	public BoxCollider2D spawnArea;
 	public MarchingDirection direction;
-	public float margin = 2.5f;
-	public float marginVar = 1.5f;
-	public bool flip = false;
+	public float margin;
+	public float marginVar;
+	public bool flip;
 
 	private const float HOUSE_Z = 0.0f;
 	private const float HOUSE_Z_INC = 1.0f;
 	
 	void Start ()
 	{
+		margin = 2.5f;
+		marginVar = 1.5f;
+		flip = false;
 		if(seeds.Length == 0)
 		{
 			return;

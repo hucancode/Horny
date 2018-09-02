@@ -12,13 +12,17 @@ public class TimeManager : MonoBehaviour {
 		ToRunning
 	}
 
-	public float countDownTime = 4.0f;
+	public float countDownTime;
 	public Text displayText;
-	private float countDownTimer = 0.0f;
-	private State state = State.Running;
+	private float countDownTimer;
+	private State state;
 
-	void Start () {
-		
+	void Start () 
+	{
+		countDownTime = 4.0f;
+		displayText = null;
+		countDownTimer = 0.0f;
+		state = State.Running;
 	}
 	
 	void Update ()

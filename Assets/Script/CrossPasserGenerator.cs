@@ -6,16 +6,20 @@ public class CrossPasserGenerator : MonoBehaviour {
 
 	public GameObject[] seeds;
 	public BoxCollider2D spawnArea;
-	public float interval = 50.0f;
-	public float linearMaxSpeed = 120.0f;
-	public float linearMaxSpeedVar = 50.0f;
-	public bool lookAtLeft = false;
+	public float interval;
+	public float linearMaxSpeed;
+	public float linearMaxSpeedVar;
+	public bool lookAtLeft;
 
-	private float timer = 0.0f;
+	private float timer;
 	private const float RACER_Z = -3.0f;
 	
 	void Start ()
 	{
+		interval = 50.0f;
+		linearMaxSpeed = 120.0f;
+		linearMaxSpeedVar = 50.0f;
+		lookAtLeft = false;
 		timer = 0.0f;
 	}
 	

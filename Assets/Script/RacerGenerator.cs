@@ -6,15 +6,18 @@ public class RacerGenerator : MonoBehaviour {
 
 	public GameObject[] seeds;
 	public BoxCollider2D spawnArea;
-	public float interval = 5.0f;
-	public float linearMaxSpeed = 120.0f;
-	public float linearMaxSpeedVar = 50.0f;
+	public float interval;
+	public float linearMaxSpeed;
+	public float linearMaxSpeedVar;
 
-	private float timer = 0.0f;
+	private float timer;
 	private const float RACER_Z = -3.0f;
 	
 	void Start ()
 	{
+		interval = 5.0f;
+		linearMaxSpeed = 120.0f;
+		linearMaxSpeedVar = 50.0f;
 		timer = interval;
 	}
 	

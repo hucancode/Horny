@@ -6,10 +6,11 @@ public class TrackPool : MonoBehaviour {
 
 	public static TrackPool instance = null;
 	private Queue<GameObject> pool;
-	public int poolSize = 5;
+	public int poolSize;
 	
 	void Awake()
 	{
+		poolSize = 5;
 		if(instance == null)
 		{
 			instance = this;

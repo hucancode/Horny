@@ -6,10 +6,11 @@ public class RacerPool : MonoBehaviour {
 
 	public static RacerPool instance = null;
 	private Queue<GameObject> pool;
-	public int poolSize = 50;
+	public int poolSize;
 	
 	void Awake()
 	{
+		poolSize = 50;
 		if(instance == null)
 		{
 			instance = this;
