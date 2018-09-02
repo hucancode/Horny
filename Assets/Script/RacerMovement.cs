@@ -49,8 +49,6 @@ public class RacerMovement : MonoBehaviour {
 	private const float VISION_LENGTH = 4.0f;
 	private const float ROTATION_TOLERANCE = 5.0f;
 	
-	
-
 	void Start() 
 	{
 		state = RacerState.CHARGING;
@@ -200,12 +198,12 @@ public class RacerMovement : MonoBehaviour {
 		return linearAcceleration < 0.0f;
 	}
 	
-	float GetRigidBodyRotation()
+	public float GetRigidBodyRotation()
 	{
 		return rigidBody.rotation + SPRITE_ANGLE;
 	}
 
-	float GetLookAtAngle()
+	public float GetLookAtAngle()
 	{
 		return (behavior == RacerBehavior.CHARGE_90)?90.0f:270.0f;
 	}
