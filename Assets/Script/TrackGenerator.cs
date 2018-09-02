@@ -9,7 +9,7 @@ public class TrackGenerator : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D coll)
 	{
-		Debug.Log("OnTriggerEnter2D");
+		//Debug.Log("OnTriggerEnter2D");
 		if(coll.gameObject.tag != "Racer")
 		{
 			return;

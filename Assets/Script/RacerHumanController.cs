@@ -65,7 +65,7 @@ public class RacerHumanController : RacerController {
 			Vector3 racer_position = Camera.main.WorldToScreenPoint(transform.position);
 			bool to_the_left = touch_position.x < racer_position.x;
 			bool to_the_bottom = touch_position.y < racer_position.y;
-			Debug.Log("touch began, touch_position ="+touch_position.ToString() + " racer_position ="+racer_position.ToString());
+			//Debug.Log("touch began, touch_position ="+touch_position.ToString() + " racer_position ="+racer_position.ToString());
 			if(to_the_bottom)
 			{
 				movementComponent.BrakeBegin();
@@ -79,7 +79,7 @@ public class RacerHumanController : RacerController {
 			Vector3 racer_position = Camera.main.WorldToScreenPoint(transform.position);
 			bool to_the_left = touch_position.x < racer_position.x;
 			bool to_the_bottom = touch_position.y < racer_position.y;
-			Debug.Log("touch moved, touch_position ="+touch_position.ToString() + " racer_position ="+racer_position.ToString());
+			//Debug.Log("touch moved, touch_position ="+touch_position.ToString() + " racer_position ="+racer_position.ToString());
 			if(to_the_bottom && !movementComponent.IsBraking())
 			{
 				movementComponent.BrakeBegin();
@@ -89,20 +89,20 @@ public class RacerHumanController : RacerController {
 				movementComponent.BrakeEnd();
 			}
 			{
-				Debug.Log("start turning");
+				//Debug.Log("start turning");
 				movementComponent.TurnUpdate(to_the_left);
 			}
 		}
 		else if(touch_phase == TouchPhase.Ended)
 		{
-			Debug.Log("touch ended");
+			//Debug.Log("touch ended");
 			if(movementComponent.IsBraking())
 			{
-				Debug.Log("stop braking");
+				//Debug.Log("stop braking");
 				movementComponent.BrakeEnd();
 			}
 			{
-				Debug.Log("stop turning");
+				//Debug.Log("stop turning");
 				movementComponent.TurnEnd();
 			}
 		}
