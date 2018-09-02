@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 61911995693403766}
   - component: {fileID: 50453924763170210}
   - component: {fileID: 114344931755685744}
-  - component: {fileID: 114699313954033520}
+  - component: {fileID: 114116787702326226}
   m_Layer: 0
   m_Name: BeerRacer
   m_TagString: Racer
@@ -153,29 +153,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114344931755685744
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1836784354832722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c073c2354d0d6cc419fe023da88a74a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rigidBody: {fileID: 50453924763170210}
-  linearMaxSpeed: 200
-  linearMinSpeed: 15
-  linearAcceleration: 150
-  angularSpeed: 500
-  turnRange: 60
-  behavior: 0
-  enableSwing: 0
-  swingPower: 0.3
-  state: 0
-  linearSpeed: 0
---- !u!114 &114699313954033520
+--- !u!114 &114116787702326226
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -188,6 +166,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementComponent: {fileID: 114344931755685744}
   sightChecker: {fileID: 70420339917014994}
+--- !u!114 &114344931755685744
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1836784354832722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c073c2354d0d6cc419fe023da88a74a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidBody: {fileID: 50453924763170210}
+  linearMaxSpeed: 400
+  linearMinSpeed: 15
+  linearAcceleration: 300
+  angularSpeed: 500
+  turnRange: 60
+  behavior: 0
+  enableSwing: 0
+  swingPower: 0.3
+  state: 0
+  linearSpeed: 0
 --- !u!212 &212698200374200190
 SpriteRenderer:
   m_ObjectHideFlags: 1

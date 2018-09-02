@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RacerAIController : RacerController {
+public class RacerNPCController : RacerController {
 
 	public CapsuleCollider2D sightChecker;
 
