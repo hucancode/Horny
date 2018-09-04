@@ -40,26 +40,9 @@ GameObject:
   - component: {fileID: 61325523920406162}
   - component: {fileID: 61992294790650194}
   m_Layer: 0
-  m_Name: TrackStreet
+  m_Name: TrackStreet1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1706536282323908
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4584223228311984}
-  - component: {fileID: 61421177980903714}
-  - component: {fileID: 114540679001656398}
-  m_Layer: 0
-  m_Name: CrossPasserGenerator
-  m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -128,7 +111,6 @@ Transform:
   - {fileID: 4716869429231788}
   - {fileID: 4781250105686168}
   - {fileID: 4790547735764440}
-  - {fileID: 4584223228311984}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -144,19 +126,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4499924467002292}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4584223228311984
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1706536282323908}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.15, y: 26.17, z: -90}
-  m_LocalScale: {x: 0.33333334, y: 0.3125001, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4499924467002292}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4716869429231788
 Transform:
@@ -297,31 +266,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 12.00439, y: 11.127533}
   m_EdgeRadius: 0
---- !u!61 &61421177980903714
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1706536282323908}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 2.1014779}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 12.00439, y: 2.3095694}
-  m_EdgeRadius: 0
 --- !u!61 &61854027564541266
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -408,24 +352,6 @@ MonoBehaviour:
   margin: 2.5
   marginVar: 0.5
   flip: 0
---- !u!114 &114540679001656398
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1706536282323908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6964ed583fc73a140b2c9ccd13cba03b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  seeds:
-  - {fileID: 1060499573506218, guid: 08b232bcf265aed4087bd33b6ce8a7c2, type: 2}
-  spawnArea: {fileID: 61421177980903714}
-  interval: 50
-  linearMaxSpeed: 80
-  linearMaxSpeedVar: 50
-  lookAtLeft: 0
 --- !u!114 &114547618078505376
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -439,6 +365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seeds:
   - {fileID: 1564052161585668}
+  - {fileID: 1806654769990130, guid: df36726fc53dd7a4e8cbf79f796f6c43, type: 2}
   hitBox: {fileID: 61854027564541266}
 --- !u!114 &114622046384658416
 MonoBehaviour:
