@@ -21,9 +21,6 @@ public class BuildingGenerator : MonoBehaviour {
 	
 	void Start ()
 	{
-		margin = 2.5f;
-		marginVar = 1.5f;
-		flip = false;
 		if(direction == MarchingDirection.Vertical)
 		{
 			float y = 0;
