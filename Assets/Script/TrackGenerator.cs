@@ -6,6 +6,7 @@ public class TrackGenerator : MonoBehaviour {
 
 	public GameObject[] seeds;
 	public BoxCollider2D hitBox;
+	public float trackLength;
 	
 	void OnTriggerEnter2D(Collider2D coll)
 	{
@@ -15,12 +16,9 @@ public class TrackGenerator : MonoBehaviour {
 			return;
 		}
 		
-		GameObject track_object = transform.parent.gameObject;
-		SpriteRenderer track_sprite = track_object.GetComponent<SpriteRenderer>();
-		float track_length = track_sprite.size.y * track_object.transform.lossyScale.y;
 		Vector3 position = Vector3.zero;
 		position.x = transform.parent.position.x;
-		position.y = transform.parent.position.y + track_length;
+		position.y = transform.parent.position.y + trackLength;
 		position.z = transform.parent.position.z;
 
 		int i = (int)Random.Range(0.0f, seeds.Length);

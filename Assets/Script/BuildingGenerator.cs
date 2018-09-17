@@ -23,8 +23,8 @@ public class BuildingGenerator : MonoBehaviour {
 	{
 		if(direction == MarchingDirection.Vertical)
 		{
-			float y = 0;
-			float max_y = y + spawnArea.size.y * transform.lossyScale.y;
+			float y = -spawnArea.size.y*0.5f;
+			float max_y = y + spawnArea.size.y;
 			float z = 0.0f;
 			while(y < max_y)
 			{
