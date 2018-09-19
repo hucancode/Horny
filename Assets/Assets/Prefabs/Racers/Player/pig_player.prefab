@@ -120,7 +120,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementComponent: {fileID: 114344184056358620}
-  swingOnOffText: {fileID: 0}
 --- !u!114 &114344184056358620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -139,7 +138,7 @@ MonoBehaviour:
   angularSpeed: 500
   turnRange: 60
   behavior: 0
-  enableSwing: 0
+  enableSwing: 1
   swingPower: 0.3
   state: 0
   linearSpeed: 0

@@ -120,11 +120,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 50476077693984540}
-  linearMaxSpeed: 400
+  linearMaxSpeed: 200
   linearMinSpeed: 15
   linearAcceleration: 300
   angularSpeed: 500
-  turnRange: 60
+  turnRange: 80
   behavior: 0
   enableSwing: 0
   swingPower: 0.3
@@ -142,7 +142,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementComponent: {fileID: 114555564968512274}
-  swingOnOffText: {fileID: 0}
 --- !u!212 &212684426661996340
 SpriteRenderer:
   m_ObjectHideFlags: 1

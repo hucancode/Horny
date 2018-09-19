@@ -120,7 +120,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementComponent: {fileID: 114513458654984428}
-  swingOnOffText: {fileID: 0}
 --- !u!114 &114513458654984428
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -133,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 50975752010701150}
-  linearMaxSpeed: 400
+  linearMaxSpeed: 300
   linearMinSpeed: 15
   linearAcceleration: 300
   angularSpeed: 500
