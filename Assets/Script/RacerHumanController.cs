@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class RacerHumanController : RacerController {
 
-	public Text swingOnOffText;
-
 	void Start () 
 	{
 		GameManager.instance.mainCharacter = gameObject;
@@ -16,7 +14,6 @@ public class RacerHumanController : RacerController {
 		if(Input.GetKey("space"))
 		{
 			movementComponent.enableSwing = !movementComponent.enableSwing;
-			swingOnOffText.text = "Swing Physics: " + (movementComponent.enableSwing?"On":"Off") + " (Press space to toggle)";
 		}
 	}
 	void Update ()
@@ -53,7 +50,7 @@ public class RacerHumanController : RacerController {
 			touch_phase = TouchPhase.Moved;
 			has_input = true;
 		}
-		ToggleSwingPhysics();
+		//ToggleSwingPhysics();
 
 		// send command
 		if (!has_input)
