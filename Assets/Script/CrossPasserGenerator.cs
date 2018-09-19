@@ -16,10 +16,6 @@ public class CrossPasserGenerator : MonoBehaviour {
 	
 	void Start ()
 	{
-		interval = 50.0f;
-		linearMaxSpeed = 120.0f;
-		linearMaxSpeedVar = 50.0f;
-		lookAtLeft = false;
 		timer = 0.0f;
 	}
 	
