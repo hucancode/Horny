@@ -366,7 +366,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -489,7 +489,6 @@ MonoBehaviour:
   - {fileID: 1972307869698460, guid: 01e5c07de6b8e624fb0721eb54d71f68, type: 2}
   - {fileID: 1434046060260192, guid: f40fd2f4e33875c4697572e7a65ca5b0, type: 2}
   spawnArea: {fileID: 61258155994004706}
-  direction: 1
   margin: 10
   marginVar: 5
   flip: 0
@@ -509,7 +508,6 @@ MonoBehaviour:
   - {fileID: 1972307869698460, guid: 01e5c07de6b8e624fb0721eb54d71f68, type: 2}
   - {fileID: 1434046060260192, guid: f40fd2f4e33875c4697572e7a65ca5b0, type: 2}
   spawnArea: {fileID: 61552711204920582}
-  direction: 1
   margin: 10
   marginVar: 0.5
   flip: 0
@@ -525,7 +523,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seeds:
-  - {fileID: 1564052161585668}
   - {fileID: 1806654769990130, guid: df36726fc53dd7a4e8cbf79f796f6c43, type: 2}
   hitBox: {fileID: 61854027564541266}
   trackLength: 75
@@ -545,7 +542,6 @@ MonoBehaviour:
   - {fileID: 1484776534363384, guid: 944d571c123b1be4290f843fdfd8d59f, type: 2}
   - {fileID: 1069183209104986, guid: 26291dfc26f4dd74fb6aa3f48ecb7895, type: 2}
   spawnArea: {fileID: 61128565709750358}
-  direction: 1
   margin: 2.5
   marginVar: 0.5
   flip: 1
@@ -565,7 +561,6 @@ MonoBehaviour:
   - {fileID: 1484776534363384, guid: 944d571c123b1be4290f843fdfd8d59f, type: 2}
   - {fileID: 1069183209104986, guid: 26291dfc26f4dd74fb6aa3f48ecb7895, type: 2}
   spawnArea: {fileID: 61280935195651164}
-  direction: 1
   margin: 2.5
   marginVar: 0.5
   flip: 0
