@@ -155,6 +155,7 @@ GameObject:
   - component: {fileID: 4684414175690736}
   - component: {fileID: 61517220852539780}
   - component: {fileID: 114545339811227304}
+  - component: {fileID: 114063471429194538}
   m_Layer: 0
   m_Name: CrossPasserGenerator
   m_TagString: Untagged
@@ -228,7 +229,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1806654769990130}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 81.64165, y: 85.75798, z: 100}
+  m_LocalPosition: {x: 72.18614, y: 20.560293, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4920835646335114}
@@ -264,7 +265,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1729826517195034}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.34, y: 34.35, z: -90.08594}
+  m_LocalPosition: {x: 11.34, y: 34.35, z: 0}
   m_LocalScale: {x: 1.6999999, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 4208492952062528}
@@ -290,7 +291,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1730855016035182}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.1, y: 32.86, z: -90}
+  m_LocalPosition: {x: -26, y: 34.48, z: -90}
   m_LocalScale: {x: 0.33333334, y: 0.3125001, z: 1}
   m_Children: []
   m_Father: {fileID: 4208492952062528}
@@ -316,7 +317,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1135691731431882}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.4, y: 34.350006, z: -90.08594}
+  m_LocalPosition: {x: -11.4, y: 34.350006, z: 0}
   m_LocalScale: {x: 1.6999999, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 4208492952062528}
@@ -385,7 +386,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.7, y: 11.39378}
+  m_Offset: {x: 11.18, y: -3.1810513}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -396,7 +397,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.2999997, y: 22.78756}
+  m_Size: {x: 10, y: 68.66815}
   m_EdgeRadius: 0
 --- !u!61 &61266199272784076
 BoxCollider2D:
@@ -460,7 +461,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.7, y: 11.381098}
+  m_Offset: {x: -11.110001, y: -3.1313343}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -471,7 +472,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.2999997, y: 22.762196}
+  m_Size: {x: 10, y: 68.47928}
   m_EdgeRadius: 0
 --- !u!61 &61360495228285224
 BoxCollider2D:
@@ -546,7 +547,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 12, y: 0.2}
+  m_Size: {x: 4, y: 1}
   m_EdgeRadius: 0
 --- !u!61 &61718981227111028
 BoxCollider2D:
@@ -573,6 +574,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 60}
   m_EdgeRadius: 0
+--- !u!114 &114063471429194538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1730855016035182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99d3a2365c453bb4fb5dd914b1f91dd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  component: {fileID: 114545339811227304}
+  delayTime: 2
+  accumulatedTime: 0
 --- !u!114 &114200471311015624
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -659,10 +674,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seeds:
   - {fileID: 1060499573506218, guid: 08b232bcf265aed4087bd33b6ce8a7c2, type: 2}
+  - {fileID: 1281334454009940, guid: 1a4e2ada06cd3b04c8558300732ebc36, type: 2}
+  - {fileID: 1852392709920804, guid: 97024313fcf25d34d81e0e4edb794c83, type: 2}
   spawnArea: {fileID: 61517220852539780}
   interval: 50
-  linearMaxSpeed: 80
-  linearMaxSpeedVar: 50
+  linearMaxSpeed: 10000
+  linearMaxSpeedVar: 1000
   lookAtLeft: 0
 --- !u!114 &114697970339870042
 MonoBehaviour:

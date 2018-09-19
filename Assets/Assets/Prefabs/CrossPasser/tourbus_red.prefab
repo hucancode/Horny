@@ -119,9 +119,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 50234040347908624}
-  linearMaxSpeed: 1000
-  linearMinSpeed: 600
-  linearAcceleration: 1000
+  linearMaxSpeed: 10000
+  linearMinSpeed: 6000
+  linearAcceleration: 10000
   linearSpeed: 0
   lookAtAngle: 0
 --- !u!212 &212939448841112706
