@@ -19,8 +19,6 @@ public class TimeManager : MonoBehaviour {
 
 	void Start () 
 	{
-		countDownTime = 4.0f;
-		displayText = null;
 		countDownTimer = 0.0f;
 		state = State.Running;
 	}
