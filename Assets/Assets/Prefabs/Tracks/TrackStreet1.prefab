@@ -524,6 +524,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seeds:
   - {fileID: 1806654769990130, guid: df36726fc53dd7a4e8cbf79f796f6c43, type: 2}
+  - {fileID: 1814613892410644, guid: 6d7bd93b572a5a74b9a77e9d8b8ef256, type: 2}
+  - {fileID: 1954554426792170, guid: f3ea3151c1e39904499601bedadf6fe4, type: 2}
+  - {fileID: 1778228643472674, guid: 3df8fbfcfb8b0b849be3ab5a75ac646f, type: 2}
   hitBox: {fileID: 61854027564541266}
   trackLength: 75
 --- !u!114 &114622046384658416
