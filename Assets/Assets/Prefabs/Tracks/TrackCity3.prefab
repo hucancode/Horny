@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 61113017799316288}
   - component: {fileID: 61374611934906176}
   m_Layer: 0
-  m_Name: TrackStreet3
+  m_Name: TrackCity3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -238,7 +238,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1814613892410644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 151.24332, y: 0.6290908, z: 100}
+  m_LocalPosition: {x: 209.08983, y: 84.83771, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4357289431258238}
@@ -591,6 +591,7 @@ MonoBehaviour:
   - {fileID: 1806654769990130, guid: df36726fc53dd7a4e8cbf79f796f6c43, type: 2}
   - {fileID: 1954554426792170, guid: f3ea3151c1e39904499601bedadf6fe4, type: 2}
   - {fileID: 1778228643472674, guid: 3df8fbfcfb8b0b849be3ab5a75ac646f, type: 2}
+  - {fileID: 1393668807826264, guid: 580f9bb648e53f249a4d5e0db1d9135a, type: 2}
   hitBox: {fileID: 61545878344715076}
   trackLength: 75
 --- !u!114 &114360267297283956
