@@ -10,7 +10,7 @@ public class RacerPool : MonoBehaviour {
 	
 	void Awake()
 	{
-		poolSize = 50;
+		poolSize = 500;
 		if(instance == null)
 		{
 			instance = this;
