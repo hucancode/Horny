@@ -11,23 +11,6 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1441486337876990}
   m_IsPrefabParent: 1
---- !u!1 &1033581393827242
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4308874868972614}
-  - component: {fileID: 61531786321904816}
-  - component: {fileID: 114474855693831600}
-  m_Layer: 0
-  m_Name: RacerGenerator
-  m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1085047511622114
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,6 +42,23 @@ GameObject:
   m_Name: HouseGeneratorR
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1246563850487092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4297471907087848}
+  - component: {fileID: 61593136819698762}
+  - component: {fileID: 114411018186282648}
+  m_Layer: 0
+  m_Name: RacerGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -119,29 +119,29 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1441486337876990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 379, y: -136.2, z: 100}
+  m_LocalPosition: {x: 185.08896, y: -321.1786, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4965954222039994}
   - {fileID: 4688809136922866}
-  - {fileID: 4308874868972614}
   - {fileID: 4946539167543188}
   - {fileID: 4773154876738010}
+  - {fileID: 4297471907087848}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4308874868972614
+--- !u!4 &4297471907087848
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1033581393827242}
+  m_GameObject: {fileID: 1246563850487092}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -31.9, z: -90}
+  m_LocalPosition: {x: 0, y: 0, z: -90}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4025526267113848}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4688809136922866
 Transform:
@@ -163,11 +163,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1252692750216596}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -37.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 2.9999998, z: 1}
   m_Children: []
   m_Father: {fileID: 4025526267113848}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4946539167543188
 Transform:
@@ -180,7 +180,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000002, z: 1}
   m_Children: []
   m_Father: {fileID: 4025526267113848}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4965954222039994
 Transform:
@@ -245,19 +245,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 75}
   m_EdgeRadius: 0
---- !u!61 &61531786321904816
+--- !u!61 &61593136819698762
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1033581393827242}
+  m_GameObject: {fileID: 1246563850487092}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00000047683716, y: 0.97813034}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -268,7 +268,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 12.00439, y: 11.127533}
+  m_Size: {x: 8.956788, y: 63.575554}
   m_EdgeRadius: 0
 --- !u!61 &61659840768551070
 BoxCollider2D:
@@ -345,20 +345,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 75}
   m_EdgeRadius: 0
---- !u!114 &114474855693831600
+--- !u!114 &114411018186282648
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1033581393827242}
+  m_GameObject: {fileID: 1246563850487092}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cee2ae17c2b7b3644a1352da72ab616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seeds: []
-  spawnArea: {fileID: 61531786321904816}
-  interval: 2
+  seeds:
+  - {fileID: 1392446924728300, guid: 02d3a4a42a8258d4693cd3f2ba47b751, type: 2}
+  - {fileID: 1412607923665580, guid: 806f69e744dcfed47a6a21616c168ae1, type: 2}
+  - {fileID: 1092027611707164, guid: e0e73cdb6863df149a106cba98698a99, type: 2}
+  - {fileID: 1383627363599358, guid: 1e03d70ed17eaea43abf8b8e716b1490, type: 2}
+  - {fileID: 1317950669744090, guid: 1b1ba91e931da4f46a0dc05c53f6c8b6, type: 2}
+  - {fileID: 1847081756517804, guid: d776252d7c0f5fa44b17cf2d77999114, type: 2}
+  - {fileID: 1688747110313628, guid: ac0539f6a7648a34e99bdc9c7ed56ab1, type: 2}
+  - {fileID: 1162022863118016, guid: dc5c4d779bd7adc43b8311ea1e37419c, type: 2}
+  - {fileID: 1306860335310616, guid: 1907a005956cc6949b2b0814ed68476b, type: 2}
+  - {fileID: 1922240401318600, guid: 2af1c06de49469948a2ffb7728076f93, type: 2}
+  - {fileID: 1692812162747584, guid: 6369d557964a53045980963a05ff7e0a, type: 2}
+  - {fileID: 1881336973036264, guid: 9c10699abf0b7514db53b7cda3488d1d, type: 2}
+  - {fileID: 1446093702635290, guid: ba631a61f42ec274ab6cfdf6a2cbc610, type: 2}
+  - {fileID: 1917113734447346, guid: 181af27aa592f5641b19d94bf1239935, type: 2}
+  spawnArea: {fileID: 61593136819698762}
+  gridWidth: 2
+  gridHeight: 10
+  spawnRatePercent: 10
   linearMaxSpeed: 400
   linearMaxSpeedVar: 300
 --- !u!114 &114665022076548970
