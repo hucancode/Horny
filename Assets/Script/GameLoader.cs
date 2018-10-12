@@ -7,6 +7,7 @@ public class GameLoader : MonoBehaviour {
 	public GameObject gameManager;
 	public GameObject trackPool;
 	public GameObject racerPool;
+	public GameObject crashManager;
 	
 	void Awake ()
 	{
@@ -21,6 +22,10 @@ public class GameLoader : MonoBehaviour {
 		if (RacerPool.instance == null)
 		{
 			Instantiate(racerPool);
+		}
+		if (CrashManager.instance == null)
+		{
+			Instantiate(crashManager);
 		}
 	}
 }

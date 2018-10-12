@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 50729031051004064}
   - component: {fileID: 114704969091334600}
   - component: {fileID: 114151834363269606}
+  - component: {fileID: 114213278653229116}
   m_Layer: 0
   m_Name: ambulance
   m_TagString: Racer
@@ -166,6 +167,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementComponent: {fileID: 114704969091334600}
   sightChecker: {fileID: 70227128827366342}
+--- !u!114 &114213278653229116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1637765965121908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82f254bfbbafae42a58861d098b555b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114704969091334600
 MonoBehaviour:
   m_ObjectHideFlags: 1
