@@ -54,4 +54,7 @@ MonoBehaviour:
   mainCharacter: {fileID: 0}
   gameOverPopup: {fileID: 1548795007703346, guid: 07886227060a08343af12f58692a2038,
     type: 2}
+  state: 0
   pauseCountDownTime: 4
+  pauseCountDownTimer: 0
+  crashDramaTime: 2

@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour {
 		Running,
 		Pausing,
 		ToRunning,
+		CrashDrama,
 		GameOver
 	}
 
@@ -20,6 +21,8 @@ public class GameManager : MonoBehaviour {
 
 	public float pauseCountDownTime;
 	public float pauseCountDownTimer;
+
+	public float crashDramaTime;
 	
 
 	void Awake()
@@ -116,12 +119,18 @@ public class GameManager : MonoBehaviour {
         }
 	}
 	
-	public void GameOver(int reason)
+	private IEnumerator WaitAndShowPopup(int reason)
 	{
+		state = State.CrashDrama;
+		Time.timeScale = 0.0f;
+		yield return new WaitForSecondsRealtime(crashDramaTime);
 		GameObject clone = Instantiate(gameOverPopup);
 		clone.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
 		clone.GetComponent<GameOverPopup>().SetCrashReason(reason);
 		state = State.GameOver;
-		Time.timeScale = 0.0f;
+	}
+	public void GameOver(int reason)
+	{
+		StartCoroutine(WaitAndShowPopup(reason));
 	}
 }
