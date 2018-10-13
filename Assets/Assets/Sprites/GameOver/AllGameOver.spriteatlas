@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: AllGameOver
+  m_EditorData:
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 2
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 47
+      m_TextureCompression: 1
+      m_CompressionQuality: 100
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+    - serializedVersion: 2
+      m_BuildTarget: WebGL
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 12
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+    - serializedVersion: 2
+      m_BuildTarget: Standalone
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 12
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+    packingParameters:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 8880975aa4239364c941261e7291cbba, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: fa874d78474a2e34593bdf8de303f7f6, type: 3}
+  - {fileID: 21300000, guid: 1680bd55fccf6f646b9937c2fe300492, type: 3}
+  - {fileID: 21300000, guid: ce595042d0f140c41ae6c40b8e720530, type: 3}
+  - {fileID: 21300000, guid: bdce60171e5e6e141abb21227a0c4fbd, type: 3}
+  - {fileID: 21300000, guid: eebd6891d7b779c49a1402dda703e212, type: 3}
+  - {fileID: 21300000, guid: 8d0f2a4657060f34386451ca4cff01b3, type: 3}
+  - {fileID: 21300000, guid: 355b270f9c8194443a4512a86583c7f2, type: 3}
+  - {fileID: 21300000, guid: a02e1df4e9384a44898f09fdea728cbe, type: 3}
+  - {fileID: 21300000, guid: 7d214c708b94e0b498074ffde835ea58, type: 3}
+  - {fileID: 21300000, guid: 8a09f4eac89851b4392cda4ce80b240a, type: 3}
+  - {fileID: 21300000, guid: daa633c7485adf64b8f1e3db22078477, type: 3}
+  - {fileID: 21300000, guid: 0682e44e43977f74bb64c06279ab56e9, type: 3}
+  - {fileID: 21300000, guid: 1156ea0e9634f7049a9cf7d51e31b115, type: 3}
+  - {fileID: 21300000, guid: 44d20e2833111e54cbf1e777be59abc4, type: 3}
+  - {fileID: 21300000, guid: ecf9358bca573674587d4db4cafb8b2b, type: 3}
+  - {fileID: 21300000, guid: 627045b5f87f4db40afb7be338a4a8ad, type: 3}
+  - {fileID: 21300000, guid: 4b134f858f5ada54e9ded275a69fb65f, type: 3}
+  - {fileID: 21300000, guid: b7d3536970dd87448928ca063681bd97, type: 3}
+  - {fileID: 21300000, guid: a6d04a239e2ffed4287c5363c5ab32ce, type: 3}
+  - {fileID: 21300000, guid: 320f7ace33bdc824ebdef4bd8327d7a7, type: 3}
+  - {fileID: 21300000, guid: c77a395d820172c4ea78002b6bda5ebf, type: 3}
+  - {fileID: 21300000, guid: 864f4ee1f45c1f746bae89befe9185a1, type: 3}
+  - {fileID: 21300000, guid: 18b8945c1c7113e4ba7ba54c803b6195, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - gameover_6
+  - gameover_1
+  - gameover_12
+  - gameover_7
+  - gameover_15
+  - gameover_4
+  - gameover_14
+  - gameover_5
+  - gameover_2
+  - gameover_11
+  - gameover_8
+  - gameover_18
+  - gameover_9
+  - gameover_3_1
+  - gameover_3_2
+  - gameover_20
+  - gameover_22
+  - gameover_17
+  - gameover_13
+  - gameover_16
+  - gameover_19
+  - gameover_21
+  - gameover_10
+  m_Tag: AllGameOver
+  m_IsVariant: 0
