@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class QuitButton : MonoBehaviour {
 
+	public GameOverPopup parent;
 	// Use this for initialization
 	void Start () {
 		
@@ -16,6 +17,12 @@ public class QuitButton : MonoBehaviour {
 
 	public void Press()
 	{
+		parent.FadeOut();
+		StartCoroutine(WaitAndToMainMenu());
+	}
+	public IEnumerator WaitAndToMainMenu()
+	{
+		yield return new WaitForSecondsRealtime(1.0f);
 		GameManager.instance.ToMainMenu();
 	}
 }
