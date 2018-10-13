@@ -5,24 +5,29 @@ using UnityEngine;
 public class QuitButton : MonoBehaviour {
 
 	public GameOverPopup parent;
+	private GameObject canvas;
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+	{
+		canvas = GameObject.FindGameObjectWithTag("Canvas");
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 		
 	}
 
 	public void Press()
 	{
 		parent.FadeOut();
-		StartCoroutine(WaitAndToMainMenu());
+		StartCoroutine(WaitAndDestroy());
 	}
-	public IEnumerator WaitAndToMainMenu()
+	public IEnumerator WaitAndDestroy()
 	{
-		yield return new WaitForSecondsRealtime(1.0f);
+		yield return new WaitForSecondsRealtime(1.2f);
 		GameManager.instance.ToMainMenu();
+		Destroy(parent.gameObject);
+		Destroy(canvas);
 	}
 }
