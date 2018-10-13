@@ -101,7 +101,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: bd403de0fe0870c4bac10d8581bb9bbb, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -120,7 +120,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementComponent: {fileID: 114354708332295696}
-  swingOnOffText: {fileID: 0}
 --- !u!114 &114354708332295696
 MonoBehaviour:
   m_ObjectHideFlags: 1
