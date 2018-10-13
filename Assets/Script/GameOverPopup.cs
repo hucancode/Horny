@@ -12,13 +12,17 @@ public class GameOverPopup : MonoBehaviour {
 	public Image overlay;
 	public Slider expGauge;
 	public GameObject retryPrompt;
-	
+	public Animator crashImageAnimator;
+	public Animator overlayAnimator;
+	public Animator retryPromptAnimator;
+
 	void Start()
 	{
 	}
 
 	public void SetCrashReason(int reason)
 	{
+		reason = (int)Random.Range(0.0f, crashReasonSprite.Length);
 		reason = Mathf.Min(Mathf.Max(0, reason), crashReasonSprite.Length - 1);
 		crashImage.sprite = crashReasonSprite[reason];
 	}
@@ -28,9 +32,11 @@ public class GameOverPopup : MonoBehaviour {
 		expGauge.value = percent;
 	}
 
-	public void OnPopupFadedOut()
+	public void FadeOut()
 	{
-		Destroy(gameObject);
+		crashImageAnimator.SetBool("FadingIn", false);
+		overlayAnimator.SetBool("FadingIn", false);
+		retryPromptAnimator.SetBool("FadingIn", false);
 	}
 
 	void Update ()
