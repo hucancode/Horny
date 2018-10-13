@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RetryButton : MonoBehaviour {
 
+	public GameOverPopup parent;
 	// Use this for initialization
 	void Start () {
 		
@@ -16,6 +17,12 @@ public class RetryButton : MonoBehaviour {
 
 	public void Press()
 	{
+		parent.FadeOut();
+		StartCoroutine(WaitAndRestartGame());
+	}
+	public IEnumerator WaitAndRestartGame()
+	{
+		yield return new WaitForSecondsRealtime(1.0f);
 		GameManager.instance.GameRestart();
 	}
 }
