@@ -6,12 +6,17 @@ using UnityEngine.SceneManagement;
 public class GameplaySceneLoader : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
-		SceneManager.LoadScene("GamePlay");
+	void Start ()
+	{
+		StartCoroutine(LoadScene());
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+	IEnumerator LoadScene()
+	{
+		AsyncOperation operation = SceneManager.LoadSceneAsync("GamePlay");
+		while (!operation.isDone)
+        {
+            yield return null;
+        }
 	}
 }

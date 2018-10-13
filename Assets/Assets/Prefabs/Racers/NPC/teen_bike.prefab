@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 50314067449509448}
   - component: {fileID: 114326837217794912}
   - component: {fileID: 114549636501625756}
+  - component: {fileID: 114161193721079136}
   m_Layer: 0
   m_Name: teen_bike
   m_TagString: Racer
@@ -153,6 +154,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114161193721079136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1274984734248688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82f254bfbbafae42a58861d098b555b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crashReasonKey: 0
 --- !u!114 &114326837217794912
 MonoBehaviour:
   m_ObjectHideFlags: 1

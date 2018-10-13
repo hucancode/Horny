@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 50607612443252468}
   - component: {fileID: 114837160201001478}
   - component: {fileID: 114012862691583974}
+  - component: {fileID: 114360218452083656}
   m_Layer: 0
   m_Name: ford_yellow
   m_TagString: Racer
@@ -166,6 +167,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementComponent: {fileID: 114837160201001478}
   sightChecker: {fileID: 70968485512611126}
+--- !u!114 &114360218452083656
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1162022863118016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82f254bfbbafae42a58861d098b555b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crashReasonKey: 0
 --- !u!114 &114837160201001478
 MonoBehaviour:
   m_ObjectHideFlags: 1

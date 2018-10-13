@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 50937166127654422}
   - component: {fileID: 114897133810931502}
   - component: {fileID: 114680156833180166}
+  - component: {fileID: 114578410338629976}
   m_Layer: 0
   m_Name: thot2
   m_TagString: Racer
@@ -153,6 +154,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114578410338629976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1430368158816376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82f254bfbbafae42a58861d098b555b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crashReasonKey: 0
 --- !u!114 &114680156833180166
 MonoBehaviour:
   m_ObjectHideFlags: 1

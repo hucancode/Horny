@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 50483640415883944}
   - component: {fileID: 114290631433545468}
   - component: {fileID: 114274344517811550}
+  - component: {fileID: 114386543322218234}
   m_Layer: 0
   m_Name: tdsv
   m_TagString: Racer
@@ -188,6 +189,18 @@ MonoBehaviour:
   swingPower: 0.3
   state: 0
   linearSpeed: 0
+--- !u!114 &114386543322218234
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1347175118676592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82f254bfbbafae42a58861d098b555b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crashReasonKey: 0
 --- !u!212 &212920791725037180
 SpriteRenderer:
   m_ObjectHideFlags: 1

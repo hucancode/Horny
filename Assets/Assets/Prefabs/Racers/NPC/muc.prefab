@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 50892734746937062}
   - component: {fileID: 114623790635716850}
   - component: {fileID: 114342668839115916}
+  - component: {fileID: 114960513896558230}
   m_Layer: 0
   m_Name: muc
   m_TagString: Racer
@@ -188,6 +189,18 @@ MonoBehaviour:
   swingPower: 0.3
   state: 0
   linearSpeed: 0
+--- !u!114 &114960513896558230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1267139590742072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82f254bfbbafae42a58861d098b555b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crashReasonKey: 0
 --- !u!212 &212896538175166020
 SpriteRenderer:
   m_ObjectHideFlags: 1

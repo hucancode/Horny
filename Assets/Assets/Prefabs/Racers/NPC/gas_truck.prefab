@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 50293804617736900}
   - component: {fileID: 114146658327844034}
   - component: {fileID: 114599370519171082}
+  - component: {fileID: 114759013586148562}
   m_Layer: 0
   m_Name: gas_truck
   m_TagString: Racer
@@ -188,6 +189,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementComponent: {fileID: 114146658327844034}
   sightChecker: {fileID: 70872606404842582}
+--- !u!114 &114759013586148562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1306860335310616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82f254bfbbafae42a58861d098b555b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crashReasonKey: 0
 --- !u!212 &212602869684401652
 SpriteRenderer:
   m_ObjectHideFlags: 1

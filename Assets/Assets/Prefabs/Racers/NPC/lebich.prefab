@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 50436461283179898}
   - component: {fileID: 114526807499686300}
   - component: {fileID: 114085554976001184}
+  - component: {fileID: 114490504617321962}
   m_Layer: 0
   m_Name: lebich
   m_TagString: Racer
@@ -166,6 +167,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementComponent: {fileID: 114526807499686300}
   sightChecker: {fileID: 70928592368853876}
+--- !u!114 &114490504617321962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1065601568362970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82f254bfbbafae42a58861d098b555b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crashReasonKey: 0
 --- !u!114 &114526807499686300
 MonoBehaviour:
   m_ObjectHideFlags: 1

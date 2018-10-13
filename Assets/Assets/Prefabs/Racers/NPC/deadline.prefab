@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 50773896372840602}
   - component: {fileID: 114412100799602468}
   - component: {fileID: 114212092819141184}
+  - component: {fileID: 114282216268346844}
   m_Layer: 0
   m_Name: deadline
   m_TagString: Racer
@@ -166,6 +167,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementComponent: {fileID: 114412100799602468}
   sightChecker: {fileID: 70042431023129512}
+--- !u!114 &114282216268346844
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1092364922375204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82f254bfbbafae42a58861d098b555b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crashReasonKey: 0
 --- !u!114 &114412100799602468
 MonoBehaviour:
   m_ObjectHideFlags: 1

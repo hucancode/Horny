@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 50345650458020750}
   - component: {fileID: 114523238354055284}
   - component: {fileID: 114414783736052280}
+  - component: {fileID: 114368336738838694}
   m_Layer: 0
   m_Name: container
   m_TagString: Racer
@@ -153,6 +154,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114368336738838694
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1412607923665580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82f254bfbbafae42a58861d098b555b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crashReasonKey: 0
 --- !u!114 &114414783736052280
 MonoBehaviour:
   m_ObjectHideFlags: 1

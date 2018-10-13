@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 50565541470908546}
   - component: {fileID: 114255698954215558}
   - component: {fileID: 114474893338623914}
+  - component: {fileID: 114893766584054460}
   m_Layer: 0
   m_Name: holligan
   m_TagString: Racer
@@ -188,6 +189,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementComponent: {fileID: 114255698954215558}
   sightChecker: {fileID: 70747504008858726}
+--- !u!114 &114893766584054460
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1917113734447346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82f254bfbbafae42a58861d098b555b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crashReasonKey: 0
 --- !u!212 &212547834601640054
 SpriteRenderer:
   m_ObjectHideFlags: 1

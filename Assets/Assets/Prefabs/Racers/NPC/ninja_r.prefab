@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 50375421647078256}
   - component: {fileID: 114837000233419118}
   - component: {fileID: 114205403755460422}
+  - component: {fileID: 114801894018414280}
   m_Layer: 0
   m_Name: ninja_r
   m_TagString: Racer
@@ -166,6 +167,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementComponent: {fileID: 114837000233419118}
   sightChecker: {fileID: 70954428860061430}
+--- !u!114 &114801894018414280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1111258158548304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82f254bfbbafae42a58861d098b555b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crashReasonKey: 0
 --- !u!114 &114837000233419118
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -182,8 +182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9ad45790d7fb944f822cad111bbfc71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countDownTime: 4
-  displayText: {fileID: 584758193}
 --- !u!4 &190156576
 Transform:
   m_ObjectHideFlags: 0
@@ -241,6 +239,8 @@ MonoBehaviour:
     type: 2}
   trackPool: {fileID: 1194940059086614, guid: ceaedc58d343b1b458fb208c20cf17b9, type: 2}
   racerPool: {fileID: 1661037365034758, guid: 0a5e2cfabed0400488c5a26f3c82909c, type: 2}
+  crashManager: {fileID: 1197687982888484, guid: 0ba6530a0ab94664dbc7acc3b52efc8c,
+    type: 2}
 --- !u!1001 &540466178
 Prefab:
   m_ObjectHideFlags: 0
@@ -293,6 +293,7 @@ GameObject:
   - component: {fileID: 584758192}
   - component: {fileID: 584758194}
   - component: {fileID: 584758193}
+  - component: {fileID: 584758195}
   m_Layer: 5
   m_Name: TimeDisplay
   m_TagString: Untagged
@@ -357,6 +358,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 584758191}
+--- !u!114 &584758195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 584758191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ad808bfc0b7e614fac3557db7446e8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayText: {fileID: 584758193}
 --- !u!1001 &592932644
 Prefab:
   m_ObjectHideFlags: 0

@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 50730740953120136}
   - component: {fileID: 114417596703218692}
   - component: {fileID: 114869490807314218}
+  - component: {fileID: 114520101716481570}
   m_Layer: 0
   m_Name: ford_black
   m_TagString: Racer
@@ -175,6 +176,18 @@ MonoBehaviour:
   swingPower: 0.3
   state: 0
   linearSpeed: 0
+--- !u!114 &114520101716481570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1383627363599358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82f254bfbbafae42a58861d098b555b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crashReasonKey: 0
 --- !u!114 &114869490807314218
 MonoBehaviour:
   m_ObjectHideFlags: 1

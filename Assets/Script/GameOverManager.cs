@@ -5,21 +5,8 @@ using UnityEngine.UI;
 
 public class GameOverManager : MonoBehaviour {
 
-	enum State
-	{
-		FADING_IN,
-		EXP_GAINED,
-		RETRY_PROMPT,
-		FADING_OUT,
-		FADED_OUT
-	}
 	public static GameOverManager instance = null;
-	public Image crashImage;
-	public Animator animator;
-	public GameObject expGauge;
-	public GameObject retryPrompt;
-
-	private State state;
+	public GameOverPopup gameOverPopup;
 	void Awake()
 	{
 		if(instance == null)
@@ -32,26 +19,13 @@ public class GameOverManager : MonoBehaviour {
 		}
 		DontDestroyOnLoad(gameObject);
 	}
-	
-	void Start()
-	{
-		state = State.FADING_IN;
-	}
-	public void SetCrashImage(Sprite sprite)
-	{
-		crashImage.sprite = sprite;
-	}
-	public void SetExpGauge(int exp)
-	{
-		
-	}
 
-	public void ShowPopup()
+	public void GameOver(int reason)
 	{
-		state = State.FADING_IN;
+		gameOverPopup.SetCrashReason(reason);
+		// stop game logic
 	}
-
-	void Update ()
+	public void GameRestart()
 	{
 		
 	}

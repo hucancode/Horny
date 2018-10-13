@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 50017419295049400}
   - component: {fileID: 114170533500008762}
   - component: {fileID: 114548108689486442}
+  - component: {fileID: 114320950777275912}
   m_Layer: 0
   m_Name: pikalong
   m_TagString: Racer
@@ -175,6 +176,18 @@ MonoBehaviour:
   swingPower: 0.3
   state: 0
   linearSpeed: 0
+--- !u!114 &114320950777275912
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1533913874424056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82f254bfbbafae42a58861d098b555b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crashReasonKey: 0
 --- !u!114 &114548108689486442
 MonoBehaviour:
   m_ObjectHideFlags: 1

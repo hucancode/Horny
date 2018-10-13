@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 50018955569159636}
   - component: {fileID: 114812055097197906}
   - component: {fileID: 114591719046435982}
+  - component: {fileID: 114386696358146790}
   m_Layer: 0
   m_Name: dalab
   m_TagString: Racer
@@ -153,6 +154,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114386696358146790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1963906379055824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82f254bfbbafae42a58861d098b555b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crashReasonKey: 0
 --- !u!114 &114591719046435982
 MonoBehaviour:
   m_ObjectHideFlags: 1

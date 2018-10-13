@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MainPlayer
   - Racer
+  - Canvas
   layers:
   - Default
   - TransparentFX

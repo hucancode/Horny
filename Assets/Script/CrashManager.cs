@@ -5,9 +5,7 @@ using UnityEngine;
 public class CrashManager : MonoBehaviour {
 
 	public static CrashManager instance = null;
-	// unity cant serialize dictionary, fuck
-	//public Dictionary<int, Sprite> crashReasonSprite;
-	public Sprite[] crashReasonSprite;
+	
 	
 	void Awake()
 	{
@@ -27,19 +25,7 @@ public class CrashManager : MonoBehaviour {
 		Debug.Log("crash, reason = "+reason+"force = "+force);
 		if(force > 10.0f)
 		{
-			if(crashReasonSprite.Length != 0)
-			{
-				reason = Mathf.Min(Mathf.Max(0, reason), crashReasonSprite.Length - 1);
-				GameOverManager.instance.SetCrashImage(crashReasonSprite[reason]);
-				GameOverManager.instance.ShowPopup();
-			}
+			GameManager.instance.GameOver(reason);
 		}
 	}
-	
-	void Update()
-	{
-		
-	}
-
-
 }

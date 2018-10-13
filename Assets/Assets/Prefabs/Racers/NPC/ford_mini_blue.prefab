@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 50082223943755000}
   - component: {fileID: 114436510591248454}
   - component: {fileID: 114534212036582208}
+  - component: {fileID: 114954410864427084}
   m_Layer: 0
   m_Name: ford_mini_blue
   m_TagString: Racer
@@ -188,6 +189,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementComponent: {fileID: 114436510591248454}
   sightChecker: {fileID: 70312357848679556}
+--- !u!114 &114954410864427084
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1847081756517804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82f254bfbbafae42a58861d098b555b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crashReasonKey: 0
 --- !u!212 &212333050026459108
 SpriteRenderer:
   m_ObjectHideFlags: 1
