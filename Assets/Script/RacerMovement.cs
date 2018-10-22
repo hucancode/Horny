@@ -109,6 +109,9 @@ public class RacerMovement : MonoBehaviour {
 			Vector3 r_vector = new Vector3(thrust.x, thrust.y);
 			Debug.DrawLine(transform.position, transform.position+Vector3.Normalize(r_vector)*VISION_LENGTH, Color.green);
 		}
+		Vector3 position = gameObject.transform.position;
+		position.z = position.y % 100.0f;
+		gameObject.transform.position = position;
 	}
 
 	void AddSupportForce(Vector2 thrust)

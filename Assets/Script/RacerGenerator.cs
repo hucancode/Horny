@@ -38,7 +38,7 @@ public class RacerGenerator : MonoBehaviour {
 
 		float x = x0;
 		float y = y0;
-		Debug.Log("spawn racer setup y0="+y0+", max_y="+max_y+", y_step="+y_step);
+		//Debug.Log("spawn racer setup y0="+y0+", max_y="+max_y+", y_step="+y_step);
 		float rate = spawnRatePercent*GameManager.instance.difficulty;
 		while(y <= max_y)
 		{
@@ -59,7 +59,7 @@ public class RacerGenerator : MonoBehaviour {
 				position.x = x;
 				position.y = y;
 				position.z = RACER_Z;
-				Debug.Log("spawn racer at "+position);
+				//Debug.Log("spawn racer at "+position);
 				GameObject clone = Instantiate(seeds[i], position, Quaternion.identity);
 				clone.transform.parent = transform;
 				RacerMovement movement_component = clone.GetComponent<RacerMovement>();

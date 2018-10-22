@@ -7,6 +7,7 @@ public class FollowMainCharacter : MonoBehaviour {
 	private Vector3 offset;
 	private bool following;
 	float fixedX;
+	float fixedZ;
 	void Start () 
 	{
 		following = false;
@@ -23,6 +24,7 @@ public class FollowMainCharacter : MonoBehaviour {
 			}
 			Vector3 cam_position = GameManager.instance.mainCharacter.transform.position + offset;
 			cam_position.x = fixedX;
+			cam_position.z = fixedZ;
 			transform.position = cam_position;
 		}
 		else
@@ -32,6 +34,7 @@ public class FollowMainCharacter : MonoBehaviour {
 				offset = transform.position - GameManager.instance.mainCharacter.transform.position;
 				following = true;
 				fixedX = transform.position.x;
+				fixedZ = transform.position.z;
 				return;
 			}
 		}
