@@ -95,7 +95,7 @@ public class RacerMovement : MonoBehaviour {
 		
 		float micro_acc = linearAcceleration * Time.fixedDeltaTime;
 		linearSpeed += micro_acc;
-		linearSpeed = Mathf.Clamp(linearSpeed, linearMinSpeed, linearMaxSpeed);
+		linearSpeed = Mathf.Clamp(linearSpeed, linearMinSpeed*GameManager.instance.difficulty, linearMaxSpeed*GameManager.instance.difficulty);
 		float micro_speed = linearSpeed * Time.fixedDeltaTime;
 		Vector2 thrust = Vector2.right * micro_speed;
 		thrust = Quaternion.Euler(0.0f, 0.0f, GetRigidBodyRotation()) * thrust;

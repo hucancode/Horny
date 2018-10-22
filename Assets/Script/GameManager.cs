@@ -14,9 +14,20 @@ public class GameManager : MonoBehaviour {
 		GameOver
 	}
 
+	public enum DifficultyFunction
+	{
+		Linear,
+		Sin,
+		Exponential
+	}
+
 	public static GameManager instance = null;
 	public GameObject mainCharacter;
 	public GameObject gameOverPopup;
+	public float difficulty;
+	public float difficultyFactorA;
+	public float difficultyFactorB;
+	public DifficultyFunction difficultyGrowth;
 	public State state;
 
 	public float pauseCountDownTime;
@@ -40,6 +51,7 @@ public class GameManager : MonoBehaviour {
 	{
 		pauseCountDownTimer = 0.0f;
 		state = State.Running;
+		difficulty = 0.0f;
 	}
 	
 	void Update()
@@ -66,6 +78,28 @@ public class GameManager : MonoBehaviour {
 				}
 			break;
 		}
+	}
+
+	void FixedUpdate()
+	{
+		float y = mainCharacter.transform.position.y;
+		switch(difficultyGrowth)
+		{
+			case DifficultyFunction.Linear:
+				difficulty = y*difficultyFactorA;
+			break;
+			case DifficultyFunction.Sin:
+				difficulty = Mathf.Sin(y*difficultyFactorA)*difficultyFactorB;
+			break;
+			case DifficultyFunction.Exponential:
+				difficulty = Mathf.Pow(y*difficultyFactorA, difficultyFactorB);
+			break;
+			default:
+				difficulty = 0.0f;
+				break;
+		}
+		difficulty = Mathf.Clamp(difficulty, 0.35f, 1.0f);
+		//Debug.Log("y"+y+" difficulty = "+difficulty);
 	}
 
 	public void Pause()

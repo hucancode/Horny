@@ -39,6 +39,7 @@ public class RacerGenerator : MonoBehaviour {
 		float x = x0;
 		float y = y0;
 		Debug.Log("spawn racer setup y0="+y0+", max_y="+max_y+", y_step="+y_step);
+		float rate = spawnRatePercent*GameManager.instance.difficulty;
 		while(y <= max_y)
 		{
 			if(x > max_x)
@@ -47,7 +48,7 @@ public class RacerGenerator : MonoBehaviour {
 				y += y_step;
 			}
 			float k = Random.Range(0.0f, 100.0f);
-			if(k < spawnRatePercent)
+			if(k < rate)
 			{
 				int i = (int)Random.Range(0.0f, seeds.Length);
 				if(i == seeds.Length)
@@ -64,7 +65,7 @@ public class RacerGenerator : MonoBehaviour {
 				RacerMovement movement_component = clone.GetComponent<RacerMovement>();
 				movement_component.linearMaxSpeed = Random.Range(
 					linearMaxSpeed - linearMaxSpeedVar, linearMaxSpeed + linearMaxSpeedVar);
-				movement_component.enableSwing = (Random.Range(0.0f, 1.0f) > 0.5f);
+				movement_component.enableSwing = false;//(Random.Range(0.0f, 1.0f) > 0.5f);
 				// TODO: implement a pool that actually is a pool
 				RacerPool.instance.Push(clone);
 			}
