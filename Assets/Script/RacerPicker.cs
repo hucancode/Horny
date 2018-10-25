@@ -77,4 +77,9 @@ public class RacerPicker : MonoBehaviour, IEndDragHandler {
 		}
 		scrollRect.StopMovement();
 	}
+
+    public void setPickedCharacter()
+    {
+        GameManager.instance.characterToSpawn = currentIndex;
+    }
 }

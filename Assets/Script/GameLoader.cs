@@ -8,24 +8,29 @@ public class GameLoader : MonoBehaviour {
 	public GameObject trackPool;
 	public GameObject racerPool;
 	public GameObject crashManager;
-	
+    public GameObject playerManager;
+
 	void Awake ()
 	{
-		if (GameManager.instance == null)
+        if (GameManager.instance == null && gameManager != null)
 		{
 			Instantiate(gameManager);
 		}
-		if (TrackPool.instance == null)
+        if (TrackPool.instance == null && trackPool != null)
 		{
 			Instantiate(trackPool);
 		}
-		if (RacerPool.instance == null)
+        if (RacerPool.instance == null && racerPool != null)
 		{
 			Instantiate(racerPool);
 		}
-		if (CrashManager.instance == null)
+        if (CrashManager.instance == null && crashManager != null)
 		{
 			Instantiate(crashManager);
 		}
+        if (PlayerManager.instance == null && playerManager != null)
+        {
+            Instantiate(playerManager);
+        }
 	}
 }
