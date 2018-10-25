@@ -5,7 +5,7 @@ using UnityEngine;
 public class CrashManager : MonoBehaviour {
 
 	public static CrashManager instance = null;
-	
+    public float heavyCrashForce = 10.0f;
 	
 	void Awake()
 	{
@@ -23,7 +23,7 @@ public class CrashManager : MonoBehaviour {
 	public void Crash(int reason, float force)
 	{
 		Debug.Log("crash, reason = "+reason+"force = "+force);
-		if(force > 10.0f)
+        if (force > heavyCrashForce*GameManager.instance.difficulty)
 		{
 			GameManager.instance.GameOver(reason);
 		}
