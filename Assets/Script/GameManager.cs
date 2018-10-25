@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public static GameManager instance = null;
+    public int characterToSpawn;
 	public GameObject mainCharacter;
 	public GameObject gameOverPopup;
 	public float difficulty;
@@ -82,6 +83,10 @@ public class GameManager : MonoBehaviour {
 
 	void FixedUpdate()
 	{
+        if(mainCharacter == null)
+        {
+            return;
+        }
 		float y = mainCharacter.transform.position.y;
 		switch(difficultyGrowth)
 		{
