@@ -6,7 +6,7 @@ public class PlayerSpawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        PlayerManager.instance.Spawn();
+		PlayerManager.instance.Spawn();
 	}
 	
 	// Update is called once per frame
