@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RacerCrashSolver : MonoBehaviour {
 
-	public int crashReasonKey;
+	public int vehicleKey;
 	
 	void Start () {
 		
@@ -16,11 +16,12 @@ public class RacerCrashSolver : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D collision)
     {
-		if(collision.transform.gameObject != GameManager.instance.mainCharacter)
+		GameObject main = GameManager.instance.mainCharacter;
+		if(collision.transform.gameObject != main)
 		{
 			return;
 		}
-		
-        CrashManager.instance.Crash(crashReasonKey, collision.relativeVelocity.magnitude);
+		RacerLife lifeComponent = main.GetComponent<RacerLife>();
+		lifeComponent.ReceiveDamage(vehicleKey, collision.relativeVelocity.magnitude);
     }
 }
