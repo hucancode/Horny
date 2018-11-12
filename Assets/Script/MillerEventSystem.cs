@@ -3,7 +3,7 @@ Simple C# Event System
 Author: 		Miller
 Description:	The event listener pattern is an extremely common design pattern, especially in Game. 
 				Surprisingly Unity hasn't implemented it.
-Source: 		https://gist.github.com/wmiller/3903205#file-events-cs
+Source: 		http://www.willrmiller.com/?p=87
  */
 
 using System.Collections;
