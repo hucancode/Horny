@@ -2,12 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public class NewTrackRequestedEvent : GameEvent
+{
+	// Add event parameters here
+}
+
 public class TrackGenerator : MonoBehaviour {
 
 	public GameObject[] seeds;
 	public BoxCollider2D hitBox;
 	public float trackLength;
-	
+
+	void OnEnable()
+	{
+		Events.instance.AddListener<NewTrackRequestedEvent>(OnNewTrackRequested);
+	}
+
+	void OnDisable()
+    {
+        Events.instance.RemoveListener<NewTrackRequestedEvent>(OnNewTrackRequested);
+    }
+
 	void OnTriggerEnter2D(Collider2D coll)
 	{
 		//Debug.Log("OnTriggerEnter2D");
@@ -15,7 +30,20 @@ public class TrackGenerator : MonoBehaviour {
 		{
 			return;
 		}
-		
+		Activate();
+	}
+
+	void OnNewTrackRequested(NewTrackRequestedEvent e)
+	{
+		Activate();
+	}
+
+	void Activate()
+	{
+		if(gameObject == null || !gameObject.activeInHierarchy)
+		{
+			return;
+		}
 		Vector3 position = Vector3.zero;
 		position.x = transform.parent.position.x;
 		position.y = transform.parent.position.y;
@@ -33,5 +61,6 @@ public class TrackGenerator : MonoBehaviour {
 		// TODO: implement track pool that actually is a pool
 		TrackPool.instance.Push(clone);
 		hitBox.enabled = false;
+		gameObject.SetActive(false);
 	}
 }

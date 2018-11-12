@@ -27,8 +27,18 @@ public class SkillBallLightning : RacerSkillBase
 	void Start()
 	{
 		state = State.READY;
+	}
+
+	void OnEnable()
+	{
 		Events.instance.AddListener<SkillActivatedEvent>(OnSkillActivated);
 		Events.instance.AddListener<SkillCanceledEvent>(OnSkillCanceled);
+	}
+
+	void OnDisable()
+	{
+		Events.instance.RemoveListener<SkillActivatedEvent>(OnSkillActivated);
+		Events.instance.RemoveListener<SkillCanceledEvent>(OnSkillCanceled);
 	}
 	
 	void OnSkillActivated(SkillActivatedEvent e)
@@ -38,7 +48,6 @@ public class SkillBallLightning : RacerSkillBase
 		{
 			state = State.WIND_UP;
 			castTimer = 0.0f;
-			// switch to windup animation
 		}
 	}
 
@@ -47,25 +56,20 @@ public class SkillBallLightning : RacerSkillBase
 		if(state == State.WIND_UP)
 		{
 			state = State.READY;
-			// return to ready animation
 		}
 	}
 
-	void Update ()
+	void FixedUpdate ()
 	{
 		switch(state)
 		{
 			case State.READY:
 			break;
 			case State.WIND_UP:
-				castTimer += Time.deltaTime;
+				castTimer += Time.fixedDeltaTime;
 				if(castTimer >= castTime)
 				{
 					state = State.FLYING;
-					// switch to flying animation
-					// enable particle effect
-					// set player to invulnerable
-					// set player speed to x10
 					movement.linearMaxSpeed *= speedBoost;
 					//movement.linearSpeed = movement.linearMaxSpeed;
 					movement.linearAcceleration *= speedBoost;
@@ -73,18 +77,16 @@ public class SkillBallLightning : RacerSkillBase
 					physics.isTrigger = true;
 					life.damageReduction = 1.0f;
 					durationTimer = 0.0f;
+					NewTrackRequestedEvent e = new NewTrackRequestedEvent();
+					Events.instance.Raise(e);
 					Debug.Log("flying began");
 				}
 			break;
 			case State.FLYING:
-				durationTimer += Time.deltaTime;
+				durationTimer += Time.fixedDeltaTime;
 				if(durationTimer > duration)
 				{
 					state = State.BACK_SWING;
-					// return to ready animation
-					// disable particle effect
-					// set player to vulnerable
-					// set player speed to x0.1
 					movement.linearMaxSpeed /= speedBoost;
 					movement.linearAcceleration /= speedBoost;
 					//movement.linearSpeed = movement.linearMaxSpeed;
@@ -96,14 +98,10 @@ public class SkillBallLightning : RacerSkillBase
 				}
 			break;
 			case State.BACK_SWING:
-				backSwingTimer += Time.deltaTime;
+				backSwingTimer += Time.fixedDeltaTime;
 				if(backSwingTimer >= backSwingTime)
 				{
 					state = State.READY;
-					// switch to flying animation
-					// enable particle effect
-					// set player to invulnerable
-					// set player speed to x10
 					//movement.linearSpeed = movement.linearMaxSpeed;
 					movement.ResetRotationAndVelocity();
 					Debug.Log("flying ended");

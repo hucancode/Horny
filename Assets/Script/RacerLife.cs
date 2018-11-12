@@ -25,7 +25,7 @@ public class RacerLife : MonoBehaviour {
 		health -= damage;
 		if(health <= 0.0f)
 		{
-			//GameManager.instance.GameOver(vehicleKey);
+			GameManager.instance.GameOver(vehicleKey);
 		}
 	}
 }
