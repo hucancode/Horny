@@ -25,6 +25,8 @@ GameObject:
   - component: {fileID: 50090999981212958}
   - component: {fileID: 114146342295299570}
   - component: {fileID: 114404841166270502}
+  - component: {fileID: 114518730029657390}
+  - component: {fileID: 114942680319807244}
   m_Layer: 0
   m_Name: pikalong_player
   m_TagString: Racer
@@ -39,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1795481147579052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.102167, y: 31.27124, z: 10}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,7 +65,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &61646441438705314
 BoxCollider2D:
@@ -142,6 +144,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementComponent: {fileID: 114146342295299570}
+--- !u!114 &114518730029657390
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1795481147579052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5b211043c7e7c840a56ad83ac46d7fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  damageReduction: 0
+--- !u!114 &114942680319807244
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1795481147579052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13435d8ab1e01d54e9310de68fc2111a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coolDownTime: 0
+  chargeCount: 0
+  chargeMax: 0
+  castTime: 0.2
+  skillType: 0
+  coolDownType: 0
+  skillState: 0
+  movement: {fileID: 114146342295299570}
+  life: {fileID: 114518730029657390}
+  controller: {fileID: 114404841166270502}
+  physics: {fileID: 61646441438705314}
+  duration: 0.2
+  durationTimer: 0
+  backSwingTime: 0.2
+  backSwingTimer: 0
+  state: 0
+  speedBoost: 8000
 --- !u!212 &212590323545641302
 SpriteRenderer:
   m_ObjectHideFlags: 1

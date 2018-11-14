@@ -25,6 +25,8 @@ GameObject:
   - component: {fileID: 50168230843529542}
   - component: {fileID: 114839287395208064}
   - component: {fileID: 114151089783694168}
+  - component: {fileID: 114316217472159760}
+  - component: {fileID: 114654942602517176}
   m_Layer: 0
   m_Name: deadline_player
   m_TagString: Racer
@@ -39,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1783992787662384}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.093765, y: 27.864084, z: 10}
+  m_LocalPosition: {x: 0, y: -11, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -120,6 +122,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementComponent: {fileID: 114839287395208064}
+--- !u!114 &114316217472159760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1783992787662384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 811bdedfe915a0c44b6ef29532e3145f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {fileID: 114839287395208064}
+  life: {fileID: 114654942602517176}
+  controller: {fileID: 114151089783694168}
+  physics: {fileID: 61861431033160794}
+  duration: 10
+  durationTimer: 0
+  speedBoost: 50
+  fps: 0
+  physicsFps: 0
+  state: 0
+--- !u!114 &114654942602517176
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1783992787662384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5b211043c7e7c840a56ad83ac46d7fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10000000
+  damageReduction: 0
 --- !u!114 &114839287395208064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -132,16 +168,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 50168230843529542}
-  linearMaxSpeed: 400
+  linearMaxSpeed: 415
   linearMinSpeed: 15
   linearAcceleration: 300
+  hypebolicAccelerateTime: 2
+  acceleration: 1
   angularSpeed: 600
   turnRange: 80
   behavior: 0
   enableSwing: 0
   swingPower: 0.3
+  useImmediateForce: 1
   state: 0
-  linearSpeed: 0
+  linearSpeed: 15
 --- !u!212 &212543152273126806
 SpriteRenderer:
   m_ObjectHideFlags: 1

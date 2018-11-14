@@ -17,6 +17,12 @@ public class RacerMovement : MonoBehaviour {
 		CHARGE_270 = 1
 	};
 
+	public enum AccelerationFunction
+	{
+		LINEAR,
+		HYPERBOLIC
+	}
+
 	[Tooltip("Rigidbody2D component")]
 	public Rigidbody2D rigidBody;
 	[Tooltip("m/s, higher value means faster travel.")]
@@ -25,6 +31,10 @@ public class RacerMovement : MonoBehaviour {
 	public float linearMinSpeed;
 	[Tooltip("m/s^2, higher value means faster brake.")]
 	public float linearAcceleration;
+	[Tooltip("time to accelerate from min to max")]
+	public float hypebolicAccelerateTime;
+	[Tooltip("acceleration function")]
+	public AccelerationFunction acceleration;
 	[Tooltip("Degree/s, higher value means faster rotation.")]
 	public float angularSpeed;
 	[Tooltip("Degree, higher value means wider rotation range.")]
@@ -37,6 +47,8 @@ public class RacerMovement : MonoBehaviour {
 	public float swingPower = 0.3f;
 	[Tooltip("Enable dynamic turning, maintaining y-velocity while turning")]
 	public const bool dynamicTurning = true;
+	[Tooltip("Skip force calculation. For object that heavily rely on physics, use this can overcome physics engine limitation")]
+	public bool useImmediateForce = false;
 	//[HideInInspector]
 	public RacerState state;
 	//[HideInInspector]
@@ -73,7 +85,16 @@ public class RacerMovement : MonoBehaviour {
 		float d = targetAngle - GetRigidBodyRotation();
 		if(Mathf.Abs(d) > ROTATION_TOLERANCE)
 		{
-			float new_rotation = GetRigidBodyRotation() + Mathf.Sign(d)*angularSpeed*Time.fixedDeltaTime;
+			float new_rotation = 0.0f;
+			float micro_angle = angularSpeed*Time.fixedDeltaTime;
+			if(micro_angle > Mathf.Abs(d))
+			{
+				new_rotation = targetAngle;
+			}
+			else
+			{
+				new_rotation = GetRigidBodyRotation() + Mathf.Sign(d)*micro_angle;
+			}
 			SetRigidBodyRotation(new_rotation);
 			{
 				Vector3 r_vector = new Vector3(Mathf.Cos((targetAngle)* Mathf.Deg2Rad), Mathf.Sin((targetAngle)* Mathf.Deg2Rad));
@@ -93,14 +114,45 @@ public class RacerMovement : MonoBehaviour {
 			return;
 		}
 		
-		float micro_acc = linearAcceleration * Time.fixedDeltaTime;
+		float micro_acc = 0.0f;
+		switch(acceleration)
+		{
+			case AccelerationFunction.HYPERBOLIC:
+				// the formular is: y = ax^2, where y = desired speed, x = time passed
+				float a, x, y;
+				y = linearMaxSpeed - linearMinSpeed;
+				x = hypebolicAccelerateTime;
+				a = y/(x*x);
+				float x0, y0, x1, y1;
+				y0 = linearSpeed - linearMinSpeed;
+				y0 = Mathf.Clamp(y0, 0, y0);
+				x0 = Mathf.Sqrt(y0/a);
+				x1 = x0 + Time.fixedDeltaTime;
+				y1 = a*x1*x1;
+				micro_acc = y1 - y0;
+				break;
+			case AccelerationFunction.LINEAR:
+				micro_acc = linearAcceleration * Time.fixedDeltaTime;
+				break;
+			default:
+				break;
+		}
+		
 		linearSpeed += micro_acc;
 		linearSpeed = Mathf.Clamp(linearSpeed, linearMinSpeed*GameManager.instance.difficulty, linearMaxSpeed*GameManager.instance.difficulty);
 		float micro_speed = linearSpeed * Time.fixedDeltaTime;
 		Vector2 thrust = Vector2.right * micro_speed;
 		thrust = Quaternion.Euler(0.0f, 0.0f, GetRigidBodyRotation()) * thrust;
-		rigidBody.AddForce(thrust);
-		
+
+		if(useImmediateForce)
+		{
+			rigidBody.velocity = thrust;
+		}
+		else
+		{
+			rigidBody.AddForce(thrust);
+		}
+
 		if(dynamicTurning)
 		{
 			AddSupportForce(thrust);

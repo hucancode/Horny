@@ -103,7 +103,7 @@ public class GameManager : MonoBehaviour {
 				difficulty = 0.0f;
 				break;
 		}
-		difficulty = Mathf.Clamp(difficulty, 0.35f, 1.0f);
+		difficulty = Mathf.Clamp(difficulty, 0.7f, 2.0f);
 		//Debug.Log("y"+y+" difficulty = "+difficulty);
 	}
 
