@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class RacerHumanController : RacerController {
 
@@ -9,16 +10,11 @@ public class RacerHumanController : RacerController {
 	{
 		GameManager.instance.mainCharacter = gameObject;
 	}
-	void ToggleSwingPhysics()
-	{
-		if(Input.GetKey("space"))
-		{
-			movementComponent.enableSwing = !movementComponent.enableSwing;
-		}
-	}
+	
 	void Update ()
 	{
 		bool has_input = false;
+		bool touch_ui = false;
 		Vector2 touch_position = Vector2.zero;
 		TouchPhase touch_phase = TouchPhase.Began;
 
@@ -28,7 +24,7 @@ public class RacerHumanController : RacerController {
 			var touch = Input.GetTouch(0);
 			touch_position = touch.position;
 			touch_phase = touch.phase;
-			has_input = true;
+			touch_ui = EventSystem.current.IsPointerOverGameObject(touch.fingerId);
 		}
 
 		// pc input
@@ -37,20 +33,27 @@ public class RacerHumanController : RacerController {
 			touch_position = Input.mousePosition;
 			touch_phase = TouchPhase.Began;
 			has_input = true;
+			touch_ui = EventSystem.current.IsPointerOverGameObject();
 		}
 		else if(Input.GetMouseButtonUp(0))
 		{
 			touch_position = Input.mousePosition;
 			touch_phase = TouchPhase.Ended;
 			has_input = true;
+			touch_ui = EventSystem.current.IsPointerOverGameObject();
 		}
 		else if(Input.GetMouseButton(0))
 		{
 			touch_position = Input.mousePosition;
 			touch_phase = TouchPhase.Moved;
 			has_input = true;
+			touch_ui = EventSystem.current.IsPointerOverGameObject();
 		}
-		//ToggleSwingPhysics();
+		
+		if(touch_ui)
+		{
+			has_input = false;
+		}
 
 		// send command
 		if (!has_input)
