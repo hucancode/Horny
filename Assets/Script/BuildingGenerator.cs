@@ -5,6 +5,7 @@ using UnityEngine;
 public class BuildingGenerator : MonoBehaviour {
 	public GameObject[] seeds;
 	public BoxCollider2D spawnArea;
+	public Vector2 spawnAreaVector;
 	public float margin;
 	public float marginVar;
 	public bool flip;
@@ -12,6 +13,12 @@ public class BuildingGenerator : MonoBehaviour {
 	private const float HOUSE_Z = 0.0f;
 	private const float HOUSE_Z_INC = 1.0f;
 	
+	void OnDrawGizmos()
+	{
+		Gizmos.color = new Color(0, 1, 0, 0.2f);
+		Gizmos.DrawCube(transform.position, new Vector3(spawnAreaVector.x, spawnAreaVector.y, 1));
+	}
+
 	void Start ()
 	{
 		float y = -spawnArea.size.y*0.5f;

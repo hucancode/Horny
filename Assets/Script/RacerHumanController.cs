@@ -5,8 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class RacerHumanController : RacerController {
-
-	void Start () 
+	
+	void Start()
 	{
 		GameManager.instance.mainCharacter = gameObject;
 	}

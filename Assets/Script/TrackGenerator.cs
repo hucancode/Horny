@@ -11,6 +11,7 @@ public class TrackGenerator : MonoBehaviour {
 
 	public GameObject[] seeds;
 	public BoxCollider2D hitBox;
+	public Vector2 hitBoxVector;
 	public float trackLength;
 
 	void OnEnable()
@@ -22,6 +23,12 @@ public class TrackGenerator : MonoBehaviour {
     {
         Events.instance.RemoveListener<NewTrackRequestedEvent>(OnNewTrackRequested);
     }
+
+	void OnDrawGizmos()
+	{
+		Gizmos.color = new Color(1, 0, 0, 0.2f);
+		Gizmos.DrawCube(transform.position, new Vector3(hitBoxVector.x, hitBoxVector.y, 1));
+	}
 
 	void OnTriggerEnter2D(Collider2D coll)
 	{
