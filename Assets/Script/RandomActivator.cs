@@ -7,7 +7,7 @@ public class RandomActivator : MonoBehaviour {
 	public MonoBehaviour component;
 	public float hitRate;
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		component.enabled = false;
 		float r = Random.Range(0.0f, 100.0f);
 		if(r <= hitRate)

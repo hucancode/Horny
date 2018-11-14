@@ -6,7 +6,7 @@ public class RandomSelector : MonoBehaviour {
 
 	public MonoBehaviour[] components;
 	// Use this for initialization
-	void Start () 
+	void Awake () 
 	{
 		foreach(MonoBehaviour item in components)
 		{

@@ -7,7 +7,7 @@ public class RandomSpritePicker : MonoBehaviour {
 	public Sprite[] spites;
 	public SpriteRenderer spriteRenderer;
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		int i = (int)Random.Range(0.0f, spites.Length);
 		if(i == spites.Length)
 		{
