@@ -7,26 +7,50 @@ public class RacerGenerator : MonoBehaviour {
 	public GameObject[] seeds;
 
 	public BoxCollider2D spawnArea;
+	public BoxCollider2D wave2Trigger;
+	public Vector2 spawnAreaVector;
 	public int gridWidth;
 	public int gridHeight;
 	public float spawnRatePercent;
 	
-	public float linearMaxSpeed;
-	public float linearMaxSpeedVar;
-	
 	private const float RACER_Z = -3.0f;
 	
-	void Start ()
+	void Start()
 	{
-		SpawnRacerRandom();
+		Debug.Log("i am "+gameObject.transform.parent.gameObject+", spawn wave 1");
+		StartCoroutine(SpawnRacerRandom());
+		//SpawnRacerRandom();
 	}
-	
-	public void SpawnRacerRandom()
-	{
-		if(seeds.Length == 0)
+
+	void OnTriggerEnter2D(Collider2D coll)
+    {
+		//Debug.Log("OnTriggerEnter2D");
+		if(coll.gameObject != GameManager.instance.mainCharacter)
 		{
 			return;
 		}
+		wave2Trigger.enabled = false;
+		Debug.Log("i am "+gameObject.transform.parent.gameObject+", spawn wave 2");
+		StartCoroutine(SpawnRacerRandom());
+		//SpawnRacerRandom();
+	}
+
+	void OnDrawGizmos()
+	{
+		Gizmos.color = new Color(0, 0, 0, 0.2f);
+		Gizmos.DrawCube(transform.position, new Vector3(spawnAreaVector.x, spawnAreaVector.y, 1));
+	}
+	
+	public IEnumerator SpawnRacerRandom()
+	{
+		if (seeds.Length == 0)
+		{
+			yield return null;
+		}
+		while (GameManager.instance.mainCharacter == null)
+        {
+            yield return null;
+        }
 		float half_w = spawnArea.size.x/2.0f;
 		float half_h = spawnArea.size.y/2.0f;
 		float x0 = transform.position.x - half_w;
@@ -63,14 +87,26 @@ public class RacerGenerator : MonoBehaviour {
 				GameObject clone = Instantiate(seeds[i], position, Quaternion.identity);
 				clone.transform.parent = transform;
 				RacerMovement movement_component = clone.GetComponent<RacerMovement>();
-				movement_component.linearMaxSpeed = Random.Range(
-					linearMaxSpeed - linearMaxSpeedVar, linearMaxSpeed + linearMaxSpeedVar);
-				movement_component.enableSwing = false;//(Random.Range(0.0f, 1.0f) > 0.5f);
+				RacerMovement movement_component_player = GameManager.instance.mainCharacter.GetComponent<RacerMovement>();
+
+				float seed_speed;
+				if(transform.position.y < GameManager.instance.mainCharacter.transform.position.y)
+				{
+					seed_speed = movement_component_player.linearSpeed*0.75f;
+				}
+				else
+				{
+					seed_speed = movement_component_player.linearSpeed*1.5f;
+				}
+
+				movement_component.linearSpeed = seed_speed;
+				movement_component.linearSpeed = Mathf.Clamp(seed_speed, movement_component.linearMaxSpeed, movement_component.linearMinSpeed);
+				movement_component.linearMaxSpeed = movement_component.linearSpeed;
 				// TODO: implement a pool that actually is a pool
 				RacerPool.instance.Push(clone);
 			}
 			x += x_step;
 		}
-		
+		Debug.Log("spawn finished");
 	}
 }

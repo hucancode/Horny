@@ -179,14 +179,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 50372475463308264}
-  linearMaxSpeed: 400
+  linearMaxSpeed: 1000
   linearMinSpeed: 15
   linearAcceleration: 300
+  hypebolicAccelerateTime: 0
+  acceleration: 0
   angularSpeed: 500
   turnRange: 60
   behavior: 0
   enableSwing: 0
   swingPower: 0.3
+  useImmediateForce: 0
   state: 0
   linearSpeed: 0
 --- !u!114 &114768732463708040
@@ -200,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f82f254bfbbafae42a58861d098b555b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crashReasonKey: 0
+  vehicleKey: 0
 --- !u!212 &212930845890515076
 SpriteRenderer:
   m_ObjectHideFlags: 1
