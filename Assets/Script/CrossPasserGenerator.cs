@@ -5,7 +5,7 @@ using UnityEngine;
 public class CrossPasserGenerator : MonoBehaviour {
 
 	public GameObject[] seeds;
-	public BoxCollider2D spawnArea;
+	public Vector2 spawnArea;
 	public float interval;
 	public float linearMaxSpeed;
 	public float linearMaxSpeedVar;
@@ -18,7 +18,13 @@ public class CrossPasserGenerator : MonoBehaviour {
 	{
 		timer = 0.0f;
 	}
-	
+
+	void OnDrawGizmos()
+	{
+		Gizmos.color = new Color(0, 0, 0, 0.2f);
+		Gizmos.DrawCube(transform.position, new Vector3(spawnArea.x, spawnArea.y, 1));
+	}
+
 	void FixedUpdate ()
 	{
 		timer -= Time.fixedDeltaTime;
@@ -41,8 +47,8 @@ public class CrossPasserGenerator : MonoBehaviour {
 			i--;
 		}
 		Vector3 position = Vector3.zero;
-		float half_w = spawnArea.size.x/2;
-		float half_h = spawnArea.size.y/2;
+		float half_w = spawnArea.x/2;
+		float half_h = spawnArea.y/2;
 		position.x = transform.position.x + Random.Range(-half_w, half_w);
 		position.y = transform.position.y + Random.Range(-half_h, half_h);
 		position.z = RACER_Z;
