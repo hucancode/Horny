@@ -647,7 +647,7 @@ MonoBehaviour:
   - {fileID: 1884630014246162, guid: 6fd22611d02bcc64384cfba4ee1034b2, type: 2}
   - {fileID: 1484776534363384, guid: 944d571c123b1be4290f843fdfd8d59f, type: 2}
   - {fileID: 1069183209104986, guid: 26291dfc26f4dd74fb6aa3f48ecb7895, type: 2}
-  spawnAreaVector: {x: 4, y: 60}
+  spawnArea: {x: 4, y: 60}
   margin: 2.5
   marginVar: 0.5
   flip: 0
@@ -690,7 +690,7 @@ MonoBehaviour:
   - {fileID: 1306860335310616, guid: 1907a005956cc6949b2b0814ed68476b, type: 2}
   - {fileID: 1922240401318600, guid: 2af1c06de49469948a2ffb7728076f93, type: 2}
   wave2Trigger: {fileID: 61858867390711608}
-  spawnAreaVector: {x: 8.956788, y: 63.57555}
+  spawnArea: {x: 8.956788, y: 63.57555}
   gridWidth: 2
   gridHeight: 4
   spawnRatePercent: 10
@@ -723,7 +723,7 @@ MonoBehaviour:
   - {fileID: 1884630014246162, guid: 6fd22611d02bcc64384cfba4ee1034b2, type: 2}
   - {fileID: 1484776534363384, guid: 944d571c123b1be4290f843fdfd8d59f, type: 2}
   - {fileID: 1069183209104986, guid: 26291dfc26f4dd74fb6aa3f48ecb7895, type: 2}
-  spawnAreaVector: {x: 4, y: 70}
+  spawnArea: {x: 4, y: 70}
   margin: 2.5
   marginVar: 0.5
   flip: 1
@@ -769,7 +769,7 @@ MonoBehaviour:
   - {fileID: 1430368158816376, guid: e67f4838ad21b944284c61ab6322612b, type: 2}
   - {fileID: 1236300407864626, guid: b13a7250f30ee0543aa6b79908425280, type: 2}
   wave2Trigger: {fileID: 61858867390711608}
-  spawnAreaVector: {x: 8.956788, y: 63.57555}
+  spawnArea: {x: 8.956788, y: 63.57555}
   gridWidth: 4
   gridHeight: 10
   spawnRatePercent: 10

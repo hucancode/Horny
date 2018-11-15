@@ -1,11 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class BuildingGenerator : MonoBehaviour {
 	public GameObject[] seeds;
-	[FormerlySerializedAs("spawnAreaVector")]
 	public Vector2 spawnArea;
 	public float margin;
 	public float marginVar;

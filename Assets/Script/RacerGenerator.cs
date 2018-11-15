@@ -1,14 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class RacerGenerator : MonoBehaviour {
 
 	public GameObject[] seeds;
 
 	public BoxCollider2D wave2Trigger;
-	[FormerlySerializedAs("spawnAreaVector")]
 	public Vector2 spawnArea;
 	public int gridWidth;
 	public int gridHeight;
