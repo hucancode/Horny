@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BuildingGenerator : MonoBehaviour {
 	public GameObject[] seeds;
-	public BoxCollider2D spawnArea;
 	public Vector2 spawnAreaVector;
 	public float margin;
 	public float marginVar;
@@ -21,8 +20,8 @@ public class BuildingGenerator : MonoBehaviour {
 
 	void Start ()
 	{
-		float y = -spawnArea.size.y*0.5f;
-		float max_y = y + spawnArea.size.y;
+		float y = -spawnAreaVector.y*0.5f;
+		float max_y = y + spawnAreaVector.y;
 		float z = 0.0f;
 		while(y < max_y)
 		{

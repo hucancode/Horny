@@ -19,8 +19,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4479822513560648}
-  - component: {fileID: 61458741110338024}
   - component: {fileID: 114276125848510876}
+  - component: {fileID: 61149924592925346}
   m_Layer: 0
   m_Name: TrackGenerator
   m_TagString: Untagged
@@ -122,7 +122,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4066995593880286}
-  - component: {fileID: 61776312917329886}
   - component: {fileID: 114807978202666120}
   m_Layer: 0
   m_Name: HouseGeneratorR
@@ -157,7 +156,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4152528408800054}
-  - component: {fileID: 61439124012520392}
   - component: {fileID: 114035338771814656}
   m_Layer: 0
   m_Name: HouseGeneratorL
@@ -355,6 +353,31 @@ Transform:
   m_Father: {fileID: 4355499513936244}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61149924592925346
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1022922046271050}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 30, y: 30}
+  m_EdgeRadius: 0
 --- !u!61 &61196460228316204
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -455,56 +478,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9, y: 2.1322062}
   m_EdgeRadius: 0
---- !u!61 &61439124012520392
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1702229070562200}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4, y: 60}
-  m_EdgeRadius: 0
---- !u!61 &61458741110338024
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1022922046271050}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 30, y: 30}
-  m_EdgeRadius: 0
 --- !u!61 &61484756250183626
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -580,31 +553,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.5, y: 5.838932}
   m_EdgeRadius: 0
---- !u!61 &61776312917329886
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1477623928601456}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4, y: 70}
-  m_EdgeRadius: 0
 --- !u!61 &61858867390711608
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -617,7 +565,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00000047683716, y: 0.97813034}
+  m_Offset: {x: 0, y: 100}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -699,7 +647,7 @@ MonoBehaviour:
   - {fileID: 1884630014246162, guid: 6fd22611d02bcc64384cfba4ee1034b2, type: 2}
   - {fileID: 1484776534363384, guid: 944d571c123b1be4290f843fdfd8d59f, type: 2}
   - {fileID: 1069183209104986, guid: 26291dfc26f4dd74fb6aa3f48ecb7895, type: 2}
-  spawnArea: {fileID: 61439124012520392}
+  spawnAreaVector: {x: 4, y: 60}
   margin: 2.5
   marginVar: 0.5
   flip: 0
@@ -720,7 +668,8 @@ MonoBehaviour:
   - {fileID: 1814613892410644, guid: 6d7bd93b572a5a74b9a77e9d8b8ef256, type: 2}
   - {fileID: 1778228643472674, guid: 3df8fbfcfb8b0b849be3ab5a75ac646f, type: 2}
   - {fileID: 1393668807826264, guid: 580f9bb648e53f249a4d5e0db1d9135a, type: 2}
-  hitBox: {fileID: 61458741110338024}
+  hitBox: {fileID: 61149924592925346}
+  hitBoxVector: {x: 30, y: 30}
   trackLength: 75
 --- !u!114 &114344330475317544
 MonoBehaviour:
@@ -740,12 +689,11 @@ MonoBehaviour:
   - {fileID: 1092027611707164, guid: e0e73cdb6863df149a106cba98698a99, type: 2}
   - {fileID: 1306860335310616, guid: 1907a005956cc6949b2b0814ed68476b, type: 2}
   - {fileID: 1922240401318600, guid: 2af1c06de49469948a2ffb7728076f93, type: 2}
-  spawnArea: {fileID: 61858867390711608}
+  wave2Trigger: {fileID: 61858867390711608}
+  spawnAreaVector: {x: 8.956788, y: 63.57555}
   gridWidth: 2
   gridHeight: 4
   spawnRatePercent: 10
-  linearMaxSpeed: 400
-  linearMaxSpeedVar: 300
 --- !u!114 &114381132561007546
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -775,7 +723,7 @@ MonoBehaviour:
   - {fileID: 1884630014246162, guid: 6fd22611d02bcc64384cfba4ee1034b2, type: 2}
   - {fileID: 1484776534363384, guid: 944d571c123b1be4290f843fdfd8d59f, type: 2}
   - {fileID: 1069183209104986, guid: 26291dfc26f4dd74fb6aa3f48ecb7895, type: 2}
-  spawnArea: {fileID: 61776312917329886}
+  spawnAreaVector: {x: 4, y: 70}
   margin: 2.5
   marginVar: 0.5
   flip: 1
@@ -820,12 +768,11 @@ MonoBehaviour:
   - {fileID: 1274984734248688, guid: 6317239163698c446beab562760fcdb5, type: 2}
   - {fileID: 1430368158816376, guid: e67f4838ad21b944284c61ab6322612b, type: 2}
   - {fileID: 1236300407864626, guid: b13a7250f30ee0543aa6b79908425280, type: 2}
-  spawnArea: {fileID: 61858867390711608}
+  wave2Trigger: {fileID: 61858867390711608}
+  spawnAreaVector: {x: 8.956788, y: 63.57555}
   gridWidth: 4
   gridHeight: 10
   spawnRatePercent: 10
-  linearMaxSpeed: 400
-  linearMaxSpeedVar: 300
 --- !u!212 &212029440471033236
 SpriteRenderer:
   m_ObjectHideFlags: 1

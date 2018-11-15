@@ -6,7 +6,6 @@ public class RacerGenerator : MonoBehaviour {
 
 	public GameObject[] seeds;
 
-	public BoxCollider2D spawnArea;
 	public BoxCollider2D wave2Trigger;
 	public Vector2 spawnAreaVector;
 	public int gridWidth;
@@ -51,14 +50,14 @@ public class RacerGenerator : MonoBehaviour {
         {
             yield return null;
         }
-		float half_w = spawnArea.size.x/2.0f;
-		float half_h = spawnArea.size.y/2.0f;
+		float half_w = spawnAreaVector.x/2.0f;
+		float half_h = spawnAreaVector.y/2.0f;
 		float x0 = transform.position.x - half_w;
 		float max_x = transform.position.x + half_w;
 		float y0 = transform.position.y - half_h;
 		float max_y = transform.position.y + half_h;
-		float x_step = spawnArea.size.x/gridWidth;
-		float y_step = spawnArea.size.y/gridHeight;
+		float x_step = spawnAreaVector.x/gridWidth;
+		float y_step = spawnAreaVector.y/gridHeight;
 
 		float x = x0;
 		float y = y0;
@@ -92,15 +91,17 @@ public class RacerGenerator : MonoBehaviour {
 				float seed_speed;
 				if(transform.position.y < GameManager.instance.mainCharacter.transform.position.y)
 				{
-					seed_speed = movement_component_player.linearSpeed*0.75f;
+					seed_speed = movement_component_player.linearMaxSpeed*1.5f;
 				}
 				else
 				{
-					seed_speed = movement_component_player.linearSpeed*1.5f;
+					seed_speed = movement_component_player.linearMaxSpeed*0.75f;
 				}
 
+				Debug.Log("seed speed = "+seed_speed);
+
 				movement_component.linearSpeed = seed_speed;
-				movement_component.linearSpeed = Mathf.Clamp(seed_speed, movement_component.linearMaxSpeed, movement_component.linearMinSpeed);
+				movement_component.linearSpeed = Mathf.Clamp(seed_speed, movement_component.linearMinSpeed, movement_component.linearMaxSpeed);
 				movement_component.linearMaxSpeed = movement_component.linearSpeed;
 				// TODO: implement a pool that actually is a pool
 				RacerPool.instance.Push(clone);

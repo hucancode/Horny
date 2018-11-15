@@ -19,8 +19,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4702131254670656}
-  - component: {fileID: 61914914423212966}
   - component: {fileID: 114520145484622794}
+  - component: {fileID: 61324385954787070}
   m_Layer: 0
   m_Name: TrackGenerator
   m_TagString: Untagged
@@ -36,7 +36,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4679667185844904}
-  - component: {fileID: 61513780215623832}
   - component: {fileID: 114943504480134412}
   m_Layer: 0
   m_Name: TreeGeneratorL
@@ -70,7 +69,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4967469297226806}
-  - component: {fileID: 61942983275736320}
   - component: {fileID: 114702980996552794}
   m_Layer: 0
   m_Name: TreeGeneratorR
@@ -103,7 +101,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4174214286525604}
-  - component: {fileID: 61716031983443034}
   - component: {fileID: 114900640642706576}
   m_Layer: 0
   m_Name: HouseGeneratorR
@@ -137,7 +134,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4730521210225632}
-  - component: {fileID: 61668433377112794}
   - component: {fileID: 114812804934735024}
   m_Layer: 0
   m_Name: HouseGeneratorL
@@ -282,6 +278,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 75}
   m_EdgeRadius: 0
+--- !u!61 &61324385954787070
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1107887599504716}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 30, y: 30}
+  m_EdgeRadius: 0
 --- !u!61 &61495650288049078
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -307,31 +328,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 75}
   m_EdgeRadius: 0
---- !u!61 &61513780215623832
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1144590160489352}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 70}
-  m_EdgeRadius: 0
 --- !u!61 &61620102370086894
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -344,7 +340,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00000047683716, y: 0}
+  m_Offset: {x: 0, y: 100}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -356,106 +352,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 8.956788, y: 63.575554}
-  m_EdgeRadius: 0
---- !u!61 &61668433377112794
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1986018704409480}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4, y: 70}
-  m_EdgeRadius: 0
---- !u!61 &61716031983443034
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1517962094446900}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4, y: 70}
-  m_EdgeRadius: 0
---- !u!61 &61914914423212966
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1107887599504716}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 30, y: 30}
-  m_EdgeRadius: 0
---- !u!61 &61942983275736320
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1348646154320148}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 70}
   m_EdgeRadius: 0
 --- !u!114 &114520145484622794
 MonoBehaviour:
@@ -475,7 +371,8 @@ MonoBehaviour:
   - {fileID: 1610563611546048, guid: ecdc46da7b1d91040b3135035f5c8cbb, type: 2}
   - {fileID: 1168225617609284, guid: 11bee5f1ff5488a4ea113c4096b67c6e, type: 2}
   - {fileID: 1485167290303264, guid: b7be7e0a8e0c29449b67b4ef14174f80, type: 2}
-  hitBox: {fileID: 61914914423212966}
+  hitBox: {fileID: 61324385954787070}
+  hitBoxVector: {x: 30, y: 30}
   trackLength: 75
 --- !u!114 &114702980996552794
 MonoBehaviour:
@@ -492,7 +389,7 @@ MonoBehaviour:
   - {fileID: 1113619639642528, guid: c7950655a77ac9347ad4e9b14e0363e9, type: 2}
   - {fileID: 1972307869698460, guid: 01e5c07de6b8e624fb0721eb54d71f68, type: 2}
   - {fileID: 1434046060260192, guid: f40fd2f4e33875c4697572e7a65ca5b0, type: 2}
-  spawnArea: {fileID: 61942983275736320}
+  spawnAreaVector: {x: 1, y: 70}
   margin: 10
   marginVar: 5
   flip: 0
@@ -516,12 +413,11 @@ MonoBehaviour:
   - {fileID: 1742865109140206, guid: e94b57eb7459bd449a89686a13af273f, type: 2}
   - {fileID: 1274984734248688, guid: 6317239163698c446beab562760fcdb5, type: 2}
   - {fileID: 1446093702635290, guid: ba631a61f42ec274ab6cfdf6a2cbc610, type: 2}
-  spawnArea: {fileID: 61620102370086894}
+  wave2Trigger: {fileID: 61620102370086894}
+  spawnAreaVector: {x: 8.956788, y: 63.57555}
   gridWidth: 4
   gridHeight: 10
   spawnRatePercent: 10
-  linearMaxSpeed: 400
-  linearMaxSpeedVar: 300
 --- !u!114 &114812804934735024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -537,7 +433,7 @@ MonoBehaviour:
   - {fileID: 1884630014246162, guid: 6fd22611d02bcc64384cfba4ee1034b2, type: 2}
   - {fileID: 1484776534363384, guid: 944d571c123b1be4290f843fdfd8d59f, type: 2}
   - {fileID: 1069183209104986, guid: 26291dfc26f4dd74fb6aa3f48ecb7895, type: 2}
-  spawnArea: {fileID: 61668433377112794}
+  spawnAreaVector: {x: 4, y: 70}
   margin: 2.5
   marginVar: 0.5
   flip: 0
@@ -556,7 +452,7 @@ MonoBehaviour:
   - {fileID: 1884630014246162, guid: 6fd22611d02bcc64384cfba4ee1034b2, type: 2}
   - {fileID: 1484776534363384, guid: 944d571c123b1be4290f843fdfd8d59f, type: 2}
   - {fileID: 1069183209104986, guid: 26291dfc26f4dd74fb6aa3f48ecb7895, type: 2}
-  spawnArea: {fileID: 61716031983443034}
+  spawnAreaVector: {x: 4, y: 70}
   margin: 2.5
   marginVar: 0.5
   flip: 1
@@ -575,7 +471,7 @@ MonoBehaviour:
   - {fileID: 1113619639642528, guid: c7950655a77ac9347ad4e9b14e0363e9, type: 2}
   - {fileID: 1972307869698460, guid: 01e5c07de6b8e624fb0721eb54d71f68, type: 2}
   - {fileID: 1434046060260192, guid: f40fd2f4e33875c4697572e7a65ca5b0, type: 2}
-  spawnArea: {fileID: 61513780215623832}
+  spawnAreaVector: {x: 1, y: 70}
   margin: 10
   marginVar: 0.5
   flip: 0

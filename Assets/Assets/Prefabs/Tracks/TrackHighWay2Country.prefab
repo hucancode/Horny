@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4526597076805020}
-  - component: {fileID: 61078908236456816}
   - component: {fileID: 114414580346694100}
   m_Layer: 0
   m_Name: TreeGeneratorR
@@ -52,7 +51,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4894752742582462}
-  - component: {fileID: 61452174112023084}
   - component: {fileID: 114911412943151724}
   m_Layer: 0
   m_Name: HouseGeneratorR
@@ -86,8 +84,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4554611252696424}
-  - component: {fileID: 61456392207244866}
   - component: {fileID: 114667444634739896}
+  - component: {fileID: 61492414487636110}
   m_Layer: 0
   m_Name: TrackGenerator
   m_TagString: Untagged
@@ -145,7 +143,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1126754812691794}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.36, y: 15.199997, z: 0}
+  m_LocalPosition: {x: 7.36, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1.0000002, z: 1}
   m_Children: []
   m_Father: {fileID: 4809680818207464}
@@ -189,37 +187,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1251236749399238}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.23, y: 15.2, z: 0.09031035}
+  m_LocalPosition: {x: 12.23, y: 0, z: 0.09031035}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4809680818207464}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61078908236456816
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1126754812691794}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -15.610481}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 38.779037}
-  m_EdgeRadius: 0
 --- !u!61 &61412058436920438
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -270,32 +243,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 42.195343}
   m_EdgeRadius: 0
---- !u!61 &61452174112023084
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1251236749399238}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -15.497368}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4, y: 39.005264}
-  m_EdgeRadius: 0
---- !u!61 &61456392207244866
+--- !u!61 &61492414487636110
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -332,7 +280,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00000047683716, y: 0}
+  m_Offset: {x: 0.00000047683716, y: 65}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -371,12 +319,11 @@ MonoBehaviour:
   - {fileID: 1881336973036264, guid: 9c10699abf0b7514db53b7cda3488d1d, type: 2}
   - {fileID: 1446093702635290, guid: ba631a61f42ec274ab6cfdf6a2cbc610, type: 2}
   - {fileID: 1917113734447346, guid: 181af27aa592f5641b19d94bf1239935, type: 2}
-  spawnArea: {fileID: 61608317248195226}
+  wave2Trigger: {fileID: 61608317248195226}
+  spawnAreaVector: {x: 8.956788, y: 37.2}
   gridWidth: 2
   gridHeight: 10
   spawnRatePercent: 10
-  linearMaxSpeed: 400
-  linearMaxSpeedVar: 300
 --- !u!114 &114414580346694100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -392,7 +339,7 @@ MonoBehaviour:
   - {fileID: 1113619639642528, guid: c7950655a77ac9347ad4e9b14e0363e9, type: 2}
   - {fileID: 1972307869698460, guid: 01e5c07de6b8e624fb0721eb54d71f68, type: 2}
   - {fileID: 1434046060260192, guid: f40fd2f4e33875c4697572e7a65ca5b0, type: 2}
-  spawnArea: {fileID: 61078908236456816}
+  spawnAreaVector: {x: 1, y: 40}
   margin: 10
   marginVar: 5
   flip: 0
@@ -413,7 +360,8 @@ MonoBehaviour:
   - {fileID: 1138632282262018, guid: 0ab15e718ea3ed243a54c03a876c76ad, type: 2}
   - {fileID: 1116173339226368, guid: d276fe51cb3003a42b8d58baf7c045f5, type: 2}
   - {fileID: 1610563611546048, guid: ecdc46da7b1d91040b3135035f5c8cbb, type: 2}
-  hitBox: {fileID: 61456392207244866}
+  hitBox: {fileID: 61492414487636110}
+  hitBoxVector: {x: 30, y: 30}
   trackLength: 42
 --- !u!114 &114911412943151724
 MonoBehaviour:
@@ -430,7 +378,7 @@ MonoBehaviour:
   - {fileID: 1884630014246162, guid: 6fd22611d02bcc64384cfba4ee1034b2, type: 2}
   - {fileID: 1484776534363384, guid: 944d571c123b1be4290f843fdfd8d59f, type: 2}
   - {fileID: 1069183209104986, guid: 26291dfc26f4dd74fb6aa3f48ecb7895, type: 2}
-  spawnArea: {fileID: 61452174112023084}
+  spawnAreaVector: {x: 4, y: 40}
   margin: 2.5
   marginVar: 0.5
   flip: 1
