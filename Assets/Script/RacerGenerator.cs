@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class RacerGenerator : MonoBehaviour {
 
 	public GameObject[] seeds;
 
 	public BoxCollider2D wave2Trigger;
-	public Vector2 spawnAreaVector;
+	[FormerlySerializedAs("spawnAreaVector")]
+	public Vector2 spawnArea;
 	public int gridWidth;
 	public int gridHeight;
 	public float spawnRatePercent;
@@ -37,7 +39,7 @@ public class RacerGenerator : MonoBehaviour {
 	void OnDrawGizmos()
 	{
 		Gizmos.color = new Color(0, 0, 0, 0.2f);
-		Gizmos.DrawCube(transform.position, new Vector3(spawnAreaVector.x, spawnAreaVector.y, 1));
+		Gizmos.DrawCube(transform.position, new Vector3(spawnArea.x, spawnArea.y, 1));
 	}
 	
 	public IEnumerator SpawnRacerRandom()
@@ -50,14 +52,14 @@ public class RacerGenerator : MonoBehaviour {
         {
             yield return null;
         }
-		float half_w = spawnAreaVector.x/2.0f;
-		float half_h = spawnAreaVector.y/2.0f;
+		float half_w = spawnArea.x/2.0f;
+		float half_h = spawnArea.y/2.0f;
 		float x0 = transform.position.x - half_w;
 		float max_x = transform.position.x + half_w;
 		float y0 = transform.position.y - half_h;
 		float max_y = transform.position.y + half_h;
-		float x_step = spawnAreaVector.x/gridWidth;
-		float y_step = spawnAreaVector.y/gridHeight;
+		float x_step = spawnArea.x/gridWidth;
+		float y_step = spawnArea.y/gridHeight;
 
 		float x = x0;
 		float y = y0;

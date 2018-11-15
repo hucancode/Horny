@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class BuildingGenerator : MonoBehaviour {
 	public GameObject[] seeds;
-	public Vector2 spawnAreaVector;
+	[FormerlySerializedAs("spawnAreaVector")]
+	public Vector2 spawnArea;
 	public float margin;
 	public float marginVar;
 	public bool flip;
@@ -15,13 +17,13 @@ public class BuildingGenerator : MonoBehaviour {
 	void OnDrawGizmos()
 	{
 		Gizmos.color = new Color(0, 1, 0, 0.2f);
-		Gizmos.DrawCube(transform.position, new Vector3(spawnAreaVector.x, spawnAreaVector.y, 1));
+		Gizmos.DrawCube(transform.position, new Vector3(spawnArea.x, spawnArea.y, 1));
 	}
 
 	void Start ()
 	{
-		float y = -spawnAreaVector.y*0.5f;
-		float max_y = y + spawnAreaVector.y;
+		float y = -spawnArea.y*0.5f;
+		float max_y = y + spawnArea.y;
 		float z = 0.0f;
 		while(y < max_y)
 		{
