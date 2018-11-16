@@ -28,7 +28,10 @@ public class RacerGenerator : MonoBehaviour {
 		{
 			return;
 		}
-		wave2Trigger.enabled = false;
+		if(wave2Trigger != null)
+		{
+			wave2Trigger.enabled = false;
+		}
 		Debug.Log("i am "+gameObject.transform.parent.gameObject+", spawn wave 2");
 		StartCoroutine(SpawnRacerRandom());
 		//SpawnRacerRandom();
@@ -96,6 +99,10 @@ public class RacerGenerator : MonoBehaviour {
 				else
 				{
 					seed_speed = movement_component_player.linearMaxSpeedUnmodified*0.75f;
+					if(movement_component.behavior == RacerMovement.RacerBehavior.CHARGE_270)
+					{
+						seed_speed = movement_component_player.linearMaxSpeedUnmodified*1.5f;
+					}
 				}
 
 				Debug.Log("seed speed = "+seed_speed);

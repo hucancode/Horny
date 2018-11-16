@@ -48,7 +48,7 @@ public class RacerMovement : MonoBehaviour {
 	[Tooltip("How strong racer should swing, higher value mean less swing")]
 	public float swingPower = 0.3f;
 	[Tooltip("Enable dynamic turning, maintaining y-velocity while turning")]
-	public const bool dynamicTurning = true;
+	public const bool dynamicTurning = false;
 	[Tooltip("Skip force calculation. For object that heavily rely on physics, use this can overcome physics engine limitation")]
 	public bool useImmediateForce = false;
 	//[HideInInspector]
@@ -67,7 +67,8 @@ public class RacerMovement : MonoBehaviour {
 	{
 		state = RacerState.CHARGING;
 		swingPivot = Vector2.zero;
-		targetAngle = SPRITE_ANGLE;
+		targetAngle = GetLookAtAngle();
+		SetRigidBodyRotation(GetLookAtAngle());
 		swingPivot = transform.position;
 		linearMaxSpeedUnmodified = linearMaxSpeed;
 	}
@@ -108,6 +109,17 @@ public class RacerMovement : MonoBehaviour {
 		{
 			SetRigidBodyRotation(targetAngle);
 		}
+		// float max = GetLookAtAngle() + turnRange;
+		// float min = GetLookAtAngle() - turnRange;
+		
+		// if(Mathf.DeltaAngle(GetRigidBodyRotation(), min) > 0)
+		// {
+		// 	SetRigidBodyRotation(min);
+		// }
+		// if(Mathf.DeltaAngle(GetRigidBodyRotation(), max) < 0)
+		// {
+		// 	SetRigidBodyRotation(max);
+		// }
 	}
 
 	void UpdateMovement()
@@ -116,7 +128,6 @@ public class RacerMovement : MonoBehaviour {
 		{
 			return;
 		}
-		
 		float micro_acc = 0.0f;
 		switch(acceleration)
 		{
@@ -145,8 +156,19 @@ public class RacerMovement : MonoBehaviour {
 		linearSpeed = Mathf.Clamp(linearSpeed, linearMinSpeed*GameManager.instance.difficulty, linearMaxSpeed*GameManager.instance.difficulty);
 		float micro_speed = linearSpeed * Time.fixedDeltaTime;
 		Vector2 thrust = Vector2.right * micro_speed;
-		thrust = Quaternion.Euler(0.0f, 0.0f, GetRigidBodyRotation()) * thrust;
+		if(gameObject == GameManager.instance.mainCharacter)
+		{
+			Debug.Log("player rotation = "+GetRigidBodyRotation());
+		}
 
+		if(behavior == RacerBehavior.CHARGE_270)
+		{
+			Debug.Log("holligan rotation = "+GetRigidBodyRotation());
+		}
+
+		thrust = Quaternion.Euler(0.0f, 0.0f, GetRigidBodyRotation()) * thrust;
+		if(gameObject == GameManager.instance.mainCharacter)
+		Debug.Log("player thrust "+thrust);
 		if(useImmediateForce)
 		{
 			rigidBody.velocity = thrust;
@@ -171,9 +193,11 @@ public class RacerMovement : MonoBehaviour {
 
 	void AddSupportForce(Vector2 thrust)
 	{
-		float ratio = 1.0f/Mathf.Cos(rigidBody.rotation*Mathf.Deg2Rad);
+		float ratio = Mathf.Cos(GetRigidBodyRotation()*Mathf.Deg2Rad);
 		Vector2 full_force = thrust*ratio;
 		Vector2 support_force = full_force - thrust;
+		if(gameObject == GameManager.instance.mainCharacter)
+		Debug.Log("support_force "+support_force);
 		rigidBody.AddForce(support_force);
 	}
 
