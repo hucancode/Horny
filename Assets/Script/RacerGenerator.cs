@@ -91,11 +91,11 @@ public class RacerGenerator : MonoBehaviour {
 				float seed_speed;
 				if(transform.position.y < GameManager.instance.mainCharacter.transform.position.y)
 				{
-					seed_speed = movement_component_player.linearMaxSpeed*1.5f;
+					seed_speed = movement_component_player.linearMaxSpeedUnmodified*1.5f;
 				}
 				else
 				{
-					seed_speed = movement_component_player.linearMaxSpeed*0.75f;
+					seed_speed = movement_component_player.linearMaxSpeedUnmodified*0.75f;
 				}
 
 				Debug.Log("seed speed = "+seed_speed);

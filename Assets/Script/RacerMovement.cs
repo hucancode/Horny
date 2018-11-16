@@ -27,6 +27,8 @@ public class RacerMovement : MonoBehaviour {
 	public Rigidbody2D rigidBody;
 	[Tooltip("m/s, higher value means faster travel.")]
 	public float linearMaxSpeed;
+	[Tooltip("m/s, unmodified speed, used for reference")]
+	public float linearMaxSpeedUnmodified;
 	[Tooltip("m/s, lower value means more brake effective.")]
 	public float linearMinSpeed;
 	[Tooltip("m/s^2, higher value means faster brake.")]
@@ -67,6 +69,7 @@ public class RacerMovement : MonoBehaviour {
 		swingPivot = Vector2.zero;
 		targetAngle = SPRITE_ANGLE;
 		swingPivot = transform.position;
+		linearMaxSpeedUnmodified = linearMaxSpeed;
 	}
 
 	void FixedUpdate()
