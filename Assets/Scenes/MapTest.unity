@@ -401,28 +401,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114545339811227304, guid: df36726fc53dd7a4e8cbf79f796f6c43,
-        type: 2}
-      propertyPath: spawnAreaVector.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114545339811227304, guid: df36726fc53dd7a4e8cbf79f796f6c43,
-        type: 2}
-      propertyPath: spawnAreaVector.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114545339811227304, guid: df36726fc53dd7a4e8cbf79f796f6c43,
-        type: 2}
-      propertyPath: spawnArea.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114545339811227304, guid: df36726fc53dd7a4e8cbf79f796f6c43,
-        type: 2}
-      propertyPath: spawnArea.y
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 61517220852539780, guid: df36726fc53dd7a4e8cbf79f796f6c43, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: df36726fc53dd7a4e8cbf79f796f6c43, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &663176219

@@ -336,9 +336,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seeds:
+  - {fileID: 1474741246947510, guid: b3c3f33f77c81274cb822dc41d9f58ce, type: 2}
   - {fileID: 1884630014246162, guid: 6fd22611d02bcc64384cfba4ee1034b2, type: 2}
   - {fileID: 1484776534363384, guid: 944d571c123b1be4290f843fdfd8d59f, type: 2}
   - {fileID: 1069183209104986, guid: 26291dfc26f4dd74fb6aa3f48ecb7895, type: 2}
+  - {fileID: 1388187354117170, guid: c2ce1cc6abb7f4b499fe7699adcabaaa, type: 2}
+  - {fileID: 1138008376241582, guid: 1f8eb27b5aa7391489ce764756105f63, type: 2}
+  - {fileID: 1552407851842164, guid: 50e522bff9a33e346917e61802fdb61d, type: 2}
+  - {fileID: 1728402797945042, guid: 8483c6f172c471a459f0020226b1a0b0, type: 2}
+  - {fileID: 1697888243504802, guid: 16b1a55c1a3b86d46b517a5d1ee0e398, type: 2}
+  - {fileID: 1667985623001520, guid: bbfd626748f506747870035d40b45969, type: 2}
   spawnArea: {x: 4, y: 70}
   margin: 2.5
   marginVar: 0.5
