@@ -77,6 +77,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1612774236368264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4625196481766304}
+  - component: {fileID: 114203728420939004}
+  m_Layer: 0
+  m_Name: HerdGeneratorL
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1618083266978024
 GameObject:
   m_ObjectHideFlags: 0
@@ -85,10 +101,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4384641088122870}
-  - component: {fileID: 61563974954226282}
   - component: {fileID: 114575673187219436}
   m_Layer: 0
-  m_Name: RacerGenerator
+  m_Name: HerdGeneratorR
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -123,6 +138,23 @@ GameObject:
   m_Name: TreeGeneratorL
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1815401911221004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4986543147329084}
+  - component: {fileID: 61531606958439398}
+  - component: {fileID: 114536261388889702}
+  m_Layer: 0
+  m_Name: RacerGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -175,11 +207,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1618083266978024}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -90}
+  m_LocalPosition: {x: 4.45, y: 0, z: -90}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4525893624502190}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4498935678237346
 Transform:
@@ -210,9 +242,24 @@ Transform:
   - {fileID: 4200596378820746}
   - {fileID: 4498935678237346}
   - {fileID: 4126656452882440}
+  - {fileID: 4986543147329084}
+  - {fileID: 4625196481766304}
   - {fileID: 4384641088122870}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4625196481766304
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1612774236368264}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.34, y: 0, z: -90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4525893624502190}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4837587752003486
 Transform:
@@ -252,6 +299,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4525893624502190}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4986543147329084
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1815401911221004}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4525893624502190}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &61344703645379708
 BoxCollider2D:
@@ -303,12 +363,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 30, y: 30}
   m_EdgeRadius: 0
---- !u!61 &61563974954226282
+--- !u!61 &61531606958439398
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1618083266978024}
+  m_GameObject: {fileID: 1815401911221004}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -391,8 +451,26 @@ MonoBehaviour:
   - {fileID: 1168225617609284, guid: 11bee5f1ff5488a4ea113c4096b67c6e, type: 2}
   - {fileID: 1485167290303264, guid: b7be7e0a8e0c29449b67b4ef14174f80, type: 2}
   hitBox: {fileID: 61370793235162944}
-  hitBoxVector: {x: 30, y: 30}
   trackLength: 75
+--- !u!114 &114203728420939004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1612774236368264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee2ae17c2b7b3644a1352da72ab616e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seeds:
+  - {fileID: 1806067107858240, guid: 67d1da19c2a71de4d8a6a7c8ab904aac, type: 2}
+  - {fileID: 1406766576420992, guid: 3afbd1489857c7c4eb6f2061ad4841ff, type: 2}
+  wave2Trigger: {fileID: 0}
+  spawnArea: {x: 1, y: 70}
+  gridWidth: 1
+  gridHeight: 10
+  spawnRatePercent: 10
 --- !u!114 &114516313438950682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -412,6 +490,29 @@ MonoBehaviour:
   margin: 2.5
   marginVar: 0.5
   flip: 1
+--- !u!114 &114536261388889702
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1815401911221004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee2ae17c2b7b3644a1352da72ab616e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seeds:
+  - {fileID: 1577336325009216, guid: 0f9c1c1b2a1666343a73f56f7f0d1e19, type: 2}
+  - {fileID: 1274984734248688, guid: 6317239163698c446beab562760fcdb5, type: 2}
+  - {fileID: 1446093702635290, guid: ba631a61f42ec274ab6cfdf6a2cbc610, type: 2}
+  - {fileID: 1836784354832722, guid: 5ce320b30fa0eab49981b13aa1afa166, type: 2}
+  - {fileID: 1602568531926226, guid: 1c203d797f4d7a44c92ec23b618479b4, type: 2}
+  - {fileID: 1742865109140206, guid: e94b57eb7459bd449a89686a13af273f, type: 2}
+  wave2Trigger: {fileID: 61531606958439398}
+  spawnArea: {x: 6, y: 70}
+  gridWidth: 2
+  gridHeight: 10
+  spawnRatePercent: 10
 --- !u!114 &114575673187219436
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -424,17 +525,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seeds:
-  - {fileID: 1577336325009216, guid: 0f9c1c1b2a1666343a73f56f7f0d1e19, type: 2}
-  - {fileID: 1406766576420992, guid: 3afbd1489857c7c4eb6f2061ad4841ff, type: 2}
   - {fileID: 1806067107858240, guid: 67d1da19c2a71de4d8a6a7c8ab904aac, type: 2}
-  - {fileID: 1836784354832722, guid: 5ce320b30fa0eab49981b13aa1afa166, type: 2}
-  - {fileID: 1602568531926226, guid: 1c203d797f4d7a44c92ec23b618479b4, type: 2}
-  - {fileID: 1742865109140206, guid: e94b57eb7459bd449a89686a13af273f, type: 2}
-  - {fileID: 1274984734248688, guid: 6317239163698c446beab562760fcdb5, type: 2}
-  - {fileID: 1446093702635290, guid: ba631a61f42ec274ab6cfdf6a2cbc610, type: 2}
-  wave2Trigger: {fileID: 61563974954226282}
-  spawnArea: {x: 8.956788, y: 70}
-  gridWidth: 4
+  - {fileID: 1406766576420992, guid: 3afbd1489857c7c4eb6f2061ad4841ff, type: 2}
+  wave2Trigger: {fileID: 0}
+  spawnArea: {x: 1, y: 70}
+  gridWidth: 1
   gridHeight: 10
   spawnRatePercent: 10
 --- !u!114 &114852493187734922

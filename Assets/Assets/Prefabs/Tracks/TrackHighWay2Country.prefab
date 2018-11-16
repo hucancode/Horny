@@ -322,7 +322,7 @@ MonoBehaviour:
   wave2Trigger: {fileID: 61608317248195226}
   spawnArea: {x: 8.956788, y: 37.2}
   gridWidth: 2
-  gridHeight: 10
+  gridHeight: 5
   spawnRatePercent: 10
 --- !u!114 &114414580346694100
 MonoBehaviour:
@@ -361,7 +361,6 @@ MonoBehaviour:
   - {fileID: 1116173339226368, guid: d276fe51cb3003a42b8d58baf7c045f5, type: 2}
   - {fileID: 1610563611546048, guid: ecdc46da7b1d91040b3135035f5c8cbb, type: 2}
   hitBox: {fileID: 61492414487636110}
-  hitBoxVector: {x: 30, y: 30}
   trackLength: 42
 --- !u!114 &114911412943151724
 MonoBehaviour:

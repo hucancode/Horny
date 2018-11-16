@@ -775,7 +775,7 @@ MonoBehaviour:
   wave2Trigger: {fileID: 61881614363741336}
   spawnArea: {x: 8.956788, y: 40}
   gridWidth: 4
-  gridHeight: 10
+  gridHeight: 5
   spawnRatePercent: 10
 --- !u!114 &114558516621457458
 MonoBehaviour:
@@ -836,7 +836,7 @@ MonoBehaviour:
   wave2Trigger: {fileID: 61881614363741336}
   spawnArea: {x: 8.956788, y: 40}
   gridWidth: 2
-  gridHeight: 4
+  gridHeight: 2
   spawnRatePercent: 10
 --- !u!114 &114790583479066820
 MonoBehaviour:
@@ -894,7 +894,6 @@ MonoBehaviour:
   - {fileID: 1954554426792170, guid: f3ea3151c1e39904499601bedadf6fe4, type: 2}
   - {fileID: 1393668807826264, guid: 580f9bb648e53f249a4d5e0db1d9135a, type: 2}
   hitBox: {fileID: 61839881738091158}
-  hitBoxVector: {x: 30, y: 30}
   trackLength: 45
 --- !u!212 &212149459427734202
 SpriteRenderer:

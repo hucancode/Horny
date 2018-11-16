@@ -8,21 +8,18 @@ public class BuildingGenerator : MonoBehaviour {
 	public float margin;
 	public float marginVar;
 	public bool flip;
-
-	private const float HOUSE_Z = 0.0f;
-	private const float HOUSE_Z_INC = 1.0f;
 	
 	void OnDrawGizmos()
 	{
 		Gizmos.color = new Color(0, 1, 0, 0.2f);
 		Gizmos.DrawCube(transform.position, new Vector3(spawnArea.x, spawnArea.y, 1));
+		//GameManager.DrawGizmoString(transform.position, "Building Generator");
 	}
 
 	void Start ()
 	{
 		float y = -spawnArea.y*0.5f;
 		float max_y = y + spawnArea.y;
-		float z = 0.0f;
 		while(y < max_y)
 		{
 			int i = (int)Random.Range(0.0f, seeds.Length);
@@ -34,21 +31,28 @@ public class BuildingGenerator : MonoBehaviour {
 			Vector3 position = Vector3.zero;
 			position.x = transform.position.x;
 			position.y = transform.position.y + y;
-			position.z = HOUSE_Z + z;
-			z += HOUSE_Z_INC;
+			position.z = position.y % 100.0f;
+			
+			bool buggy = position.z > 90.0f;
+			// this method of moduling y for z has some downside, we need to hide it
+			// by avoiding buggy case
+			if(buggy)
+			{
+				y += 100 - position.z;
+				continue;
+			}
 
 			GameObject clone = Instantiate(seeds[i], position, Quaternion.identity);
 			BoxCollider2D collider = clone.GetComponent<BoxCollider2D>();
 			SpriteRenderer sprite_renderer = clone.GetComponent<SpriteRenderer>();
 
-			y += collider.size.y * clone.transform.lossyScale.y;
+			y += collider.size.y;
+			y += Random.Range(margin - marginVar, margin + marginVar);
 			if(y >= max_y)
 			{
 				Destroy(clone);
 				break;
 			}
-			y += Random.Range(margin - marginVar, margin + marginVar);
-
 			clone.transform.parent = transform;
 			sprite_renderer.flipX = flip;
 		}

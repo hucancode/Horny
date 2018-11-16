@@ -514,7 +514,7 @@ MonoBehaviour:
   spawnArea: {x: 8.956788, y: 35.12}
   gridWidth: 2
   gridHeight: 4
-  spawnRatePercent: 10
+  spawnRatePercent: 5
 --- !u!114 &114592182587824070
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -533,7 +533,6 @@ MonoBehaviour:
   - {fileID: 1116173339226368, guid: d276fe51cb3003a42b8d58baf7c045f5, type: 2}
   - {fileID: 1610563611546048, guid: ecdc46da7b1d91040b3135035f5c8cbb, type: 2}
   hitBox: {fileID: 61457209734202706}
-  hitBoxVector: {x: 30, y: 30}
   trackLength: 42
 --- !u!114 &114863032663488702
 MonoBehaviour:
@@ -598,7 +597,7 @@ MonoBehaviour:
   wave2Trigger: {fileID: 61128169095252618}
   spawnArea: {x: 8.956788, y: 35.12}
   gridWidth: 4
-  gridHeight: 10
+  gridHeight: 5
   spawnRatePercent: 10
 --- !u!114 &114981971383213408
 MonoBehaviour:

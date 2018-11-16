@@ -349,7 +349,6 @@ MonoBehaviour:
   - {fileID: 1663118055773652, guid: 496eccec997734e4e9ab9c114c844055, type: 2}
   - {fileID: 1441486337876990, guid: fc92c84ed54a5b54286c70f74627f5d9, type: 2}
   hitBox: {fileID: 61901046766183636}
-  hitBoxVector: {x: 30, y: 30}
   trackLength: 42
 --- !u!114 &114771495468085988
 MonoBehaviour:
@@ -364,17 +363,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seeds:
   - {fileID: 1577336325009216, guid: 0f9c1c1b2a1666343a73f56f7f0d1e19, type: 2}
-  - {fileID: 1406766576420992, guid: 3afbd1489857c7c4eb6f2061ad4841ff, type: 2}
-  - {fileID: 1806067107858240, guid: 67d1da19c2a71de4d8a6a7c8ab904aac, type: 2}
+  - {fileID: 1274984734248688, guid: 6317239163698c446beab562760fcdb5, type: 2}
+  - {fileID: 1446093702635290, guid: ba631a61f42ec274ab6cfdf6a2cbc610, type: 2}
   - {fileID: 1836784354832722, guid: 5ce320b30fa0eab49981b13aa1afa166, type: 2}
   - {fileID: 1602568531926226, guid: 1c203d797f4d7a44c92ec23b618479b4, type: 2}
   - {fileID: 1742865109140206, guid: e94b57eb7459bd449a89686a13af273f, type: 2}
-  - {fileID: 1274984734248688, guid: 6317239163698c446beab562760fcdb5, type: 2}
-  - {fileID: 1446093702635290, guid: ba631a61f42ec274ab6cfdf6a2cbc610, type: 2}
   wave2Trigger: {fileID: 61609654527420794}
   spawnArea: {x: 8.956788, y: 37.1}
   gridWidth: 4
-  gridHeight: 10
+  gridHeight: 5
   spawnRatePercent: 10
 --- !u!212 &212401046522452308
 SpriteRenderer:

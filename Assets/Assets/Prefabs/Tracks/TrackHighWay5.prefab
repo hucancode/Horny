@@ -380,7 +380,6 @@ MonoBehaviour:
   - {fileID: 1663118055773652, guid: 496eccec997734e4e9ab9c114c844055, type: 2}
   - {fileID: 1411284276365110, guid: da0979c36253ce64988e7c91872bc36b, type: 2}
   hitBox: {fileID: 61499377046081008}
-  hitBoxVector: {x: 30, y: 30}
   trackLength: 75
 --- !u!212 &212524522276431578
 SpriteRenderer:

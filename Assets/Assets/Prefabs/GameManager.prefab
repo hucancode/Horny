@@ -56,7 +56,7 @@ MonoBehaviour:
   gameOverPopup: {fileID: 1548795007703346, guid: 07886227060a08343af12f58692a2038,
     type: 2}
   difficulty: 1
-  difficultyFactorA: 0.0008
+  difficultyFactorA: 0.007
   difficultyFactorB: 1
   difficultyGrowth: 0
   state: 0

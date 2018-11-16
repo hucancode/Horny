@@ -349,7 +349,6 @@ MonoBehaviour:
   - {fileID: 1441486337876990, guid: fc92c84ed54a5b54286c70f74627f5d9, type: 2}
   - {fileID: 1411284276365110, guid: da0979c36253ce64988e7c91872bc36b, type: 2}
   hitBox: {fileID: 61469379521662408}
-  hitBoxVector: {x: 30, y: 30}
   trackLength: 75
 --- !u!114 &114939399733372706
 MonoBehaviour:
