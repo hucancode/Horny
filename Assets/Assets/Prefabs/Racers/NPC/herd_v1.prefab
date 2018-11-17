@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 50657126835375702}
   - component: {fileID: 114438029064676328}
   - component: {fileID: 114836938621667712}
+  - component: {fileID: 114458150917664408}
   m_Layer: 0
   m_Name: herd_v1
   m_TagString: Racer
@@ -39,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1406766576420992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.0308528, y: -0.61660385, z: 10}
+  m_LocalPosition: {x: -3.52, y: 20.83, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,7 +78,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.12804794, y: -0.16121292}
+  m_Offset: {x: -0.12804794, y: -0.04179573}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -88,7 +89,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6670151, y: 2.3732147}
+  m_Size: {x: 1.6670151, y: 1.4974937}
   m_EdgeRadius: 0
 --- !u!95 &95513082095758480
 Animator:
@@ -134,6 +135,18 @@ MonoBehaviour:
   useImmediateForce: 0
   state: 0
   linearSpeed: 0
+--- !u!114 &114458150917664408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1406766576420992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34ef4c91cd166ee40a13153dc58fb6fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {fileID: 114438029064676328}
 --- !u!114 &114836938621667712
 MonoBehaviour:
   m_ObjectHideFlags: 1

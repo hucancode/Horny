@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 50372475463308264}
   - component: {fileID: 114512390469697950}
   - component: {fileID: 114768732463708040}
+  - component: {fileID: 114370307024784550}
   m_Layer: 0
   m_Name: herd_v2
   m_TagString: Racer
@@ -39,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1806067107858240}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.0308528, y: -7.593932, z: 10}
+  m_LocalPosition: {x: 4.13, y: 17.44629, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,7 +78,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03784752, y: -0.08228874}
+  m_Offset: {x: -0.01892221, y: 0.07857609}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -88,7 +89,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4415169, y: 3.8840675}
+  m_Size: {x: 1.2144144, y: 2.8431797}
   m_EdgeRadius: 0
 --- !u!95 &95875165244514700
 Animator:
@@ -108,6 +109,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114370307024784550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1806067107858240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34ef4c91cd166ee40a13153dc58fb6fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {fileID: 114512390469697950}
 --- !u!114 &114512390469697950
 MonoBehaviour:
   m_ObjectHideFlags: 1
